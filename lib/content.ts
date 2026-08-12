@@ -62,6 +62,7 @@ export type Situation = {
   icon: 'lightbulb' | 'compass' | 'clipboard' | 'refresh' | 'table' | 'pill';
   title: string;
   blurb: string;
+  /** Guide slugs (see lib/guides.ts) shown as "Read on site" items. */
   read: string[];
   downloads: string[];
 };
@@ -72,10 +73,10 @@ export const SITUATIONS: Situation[] = [
     title: 'I think I might have ADHD',
     blurb: "You're noticing the pattern. Maybe for the first time, maybe for the hundredth.",
     read: [
-      'What ADHD can look like',
-      'Common signs and patterns',
-      'UK support links and charities',
-      'Understanding assessment options',
+      'what-adhd-can-look-like',
+      'common-signs-and-patterns',
+      'uk-support-links',
+      'assessment-options',
     ],
     downloads: ['Symptom Evidence Starter', 'Mini Diagnosis Prep Pack'],
   },
@@ -84,9 +85,9 @@ export const SITUATIONS: Situation[] = [
     title: "I haven't spoken to my GP yet",
     blurb: "You're ready to do something about it, but the appointment hasn't happened.",
     read: [
-      'Preparing for your GP appointment',
-      'What examples to collect',
-      'What to say if you freeze',
+      'preparing-for-gp',
+      'what-examples-to-collect',
+      'what-to-say-if-you-freeze',
     ],
     downloads: ['GP Appointment Prep Sheet', 'Phone Script Bank', 'Symptom Evidence Builder'],
   },
@@ -95,9 +96,9 @@ export const SITUATIONS: Situation[] = [
     title: 'I have a GP appointment booked',
     blurb: 'Walk in with the few things written down that turn 8 minutes into something useful.',
     read: [
-      'GP appointment guide',
-      'Top 3 struggles to write down',
-      'Example wording',
+      'gp-appointment-guide',
+      'top-3-struggles',
+      'example-wording',
     ],
     downloads: ['GP Summary Template', 'Appointment Prep Kit', 'One-Page Evidence Summary'],
   },
@@ -106,9 +107,9 @@ export const SITUATIONS: Situation[] = [
     title: "I've been referred and I'm waiting",
     blurb: "The hardest stage, because it can quietly delete itself if you don't track it.",
     read: [
-      'While-you-wait guidance',
-      'How to keep track of referral / admin',
-      'Overwhelm support',
+      'while-you-wait',
+      'referral-admin-tracking',
+      'overwhelm-support',
     ],
     downloads: ['Weekly Survival Planner', 'Admin Tracker', 'Referral Status Tracker'],
   },
@@ -117,9 +118,9 @@ export const SITUATIONS: Situation[] = [
     title: "I'm comparing providers",
     blurb: 'You have options. The right one depends on cost, waits, follow-up, and shared care.',
     read: [
-      'Provider questions',
-      'Cost considerations',
-      'What to check before choosing',
+      'provider-questions',
+      'cost-considerations',
+      'what-to-check-before-choosing',
     ],
     downloads: ['Provider Comparison Tracker', 'Private Cost Planner'],
   },
@@ -128,10 +129,10 @@ export const SITUATIONS: Situation[] = [
     title: "I'm starting medication / titration",
     blurb: "Track it cleanly now so review appointments aren't guesswork later.",
     read: [
-      'What to track',
-      'Questions to ask',
-      'Shared care overview',
-      'This is preparation, not medical advice',
+      'what-to-track',
+      'questions-to-ask',
+      'shared-care-overview',
+      'preparation-not-advice',
     ],
     downloads: ['Medication / Titration Notes', 'Shared Care Questions', 'Appointment Log'],
   },

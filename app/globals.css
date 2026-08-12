@@ -1927,25 +1927,28 @@ button:focus-visible {
   flex-direction: column;
   gap: 8px;
 }
-.swyu-read-list li {
+.swyu-read-item {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
   padding: 10px 14px;
   background: var(--bg);
   border: 2px solid var(--ink);
   border-radius: 999px;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
+  text-align: left;
   cursor: pointer;
   transition: transform 0.12s, background 0.12s;
 }
-.swyu-read-list li:hover {
+.swyu-read-item:hover {
   transform: translateX(4px);
   background: white;
 }
-.swyu-read-list li svg {
+.swyu-read-item svg {
   color: var(--coral);
   flex-shrink: 0;
 }
@@ -2069,3 +2072,87 @@ button:focus-visible {
 }
 .download-link:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--ink), 0 14px 24px rgba(0, 0, 0, 0.25); }
 .download-link:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--ink); }
+
+/* ============================================================
+   Guide view — free guidance expanded inside the swyu panel
+   ============================================================ */
+
+.guide-view-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: white;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 8px 15px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.guide-view-back:hover { transform: translateY(-1px); box-shadow: 0 4px 0 var(--ink); }
+.guide-view-back:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+.guide-view-back svg { color: var(--coral); }
+.guide-view-back-bottom { margin-top: 24px; }
+
+.guide-view-title {
+  margin-top: 6px;
+  outline: none;
+}
+
+.guide-view-body {
+  margin-top: 14px;
+}
+.guide-view-p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.85;
+  font-weight: 500;
+  margin: 0 0 14px;
+  text-wrap: pretty;
+}
+.guide-view-h {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 22px 0 10px;
+}
+.guide-view-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.guide-view-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  opacity: 0.88;
+  font-weight: 500;
+}
+.guide-view-list li::before {
+  content: '\2713';
+  color: var(--coral);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.guide-view-note {
+  background: var(--stage);
+  border: 2.5px dashed var(--ink);
+  border-radius: 14px;
+  padding: 13px 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 4px 0 14px;
+}
