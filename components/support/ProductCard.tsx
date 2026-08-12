@@ -1,39 +1,11 @@
-'use client';
+// A single pack card in the Downloads grid. Each card links to the pack's
+// dedicated sales page, where checkout (or the free email capture) lives.
 
-// A single pack card in the Downloads grid. Free packs download directly;
-// paid packs go through Stripe Checkout via /api/checkout.
-
-import React from 'react';
+import Link from 'next/link';
 import { COPY } from '@/lib/content';
 import { formatPrice, type Product } from '@/lib/products';
 
 export default function ProductCard({ product, index }: { product: Product; index: number }) {
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
-
-  const onBuy = async () => {
-    if (product.price === 0) {
-      // Free pack — direct download, no checkout.
-      window.location.href = `/api/download?slug=${product.slug}`;
-      return;
-    }
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug: product.slug }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.url) throw new Error(data.error || 'Checkout failed');
-      window.location.href = data.url;
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Something went wrong. Please try again.');
-      setLoading(false);
-    }
-  };
-
   return (
     <div
       className={`product-card ${product.highlight ? 'product-card-featured' : ''}`}
@@ -58,19 +30,16 @@ export default function ProductCard({ product, index }: { product: Product; inde
       <div className="product-price">
         {product.price === 0 ? <span className="product-price-free">Free</span> : formatPrice(product.price)}
       </div>
-      <button
+      <Link
+        href={product.route}
         className={`product-cta ${product.highlight ? 'product-cta-primary' : ''}`}
-        onClick={onBuy}
-        disabled={loading}
+        style={{ textDecoration: 'none' }}
       >
-        {loading ? 'Opening checkout…' : product.cta}
+        {product.cta}
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 6 L15 12 L9 18" />
         </svg>
-      </button>
-      {error && (
-        <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--coral-dark)' }}>{error}</div>
-      )}
+      </Link>
     </div>
   );
 }
