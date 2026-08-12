@@ -8,9 +8,11 @@ import Link from 'next/link';
 import StartWhereYouAre from '@/components/support/StartWhereYouAre';
 import ScrollNudges from '@/components/support/ScrollNudges';
 import ProductCard from '@/components/support/ProductCard';
+import GuideView from '@/components/support/GuideView';
 import BackgroundParticles from '@/components/BackgroundParticles';
 import { COPY, JOURNEY, WORRIES } from '@/lib/content';
 import { PRODUCTS } from '@/lib/products';
+import { getGuide } from '@/lib/guides';
 
 function clamp(v: number, lo: number, hi: number) {
   return Math.max(lo, Math.min(hi, v));
@@ -316,6 +318,8 @@ function SectionHeader({ id, eyebrow, title, sub }: { id?: string; eyebrow: stri
 }
 
 function JourneyStage({ stage }: { stage: { n: number; title: string; read: string[]; downloads: string[] } }) {
+  const [openGuide, setOpenGuide] = React.useState<string | null>(null);
+
   return (
     <div className="journey-stage" data-stage={stage.n} data-reveal>
       <div className="journey-stage-num">0{stage.n}</div>
@@ -324,10 +328,27 @@ function JourneyStage({ stage }: { stage: { n: number; title: string; read: stri
         <div className="journey-cols">
           <div>
             <div className="journey-col-label">Read on site</div>
-            <ul className="journey-list">
-              {stage.read.map((f) => (
-                <li key={f}>{f}</li>
-              ))}
+            <ul className="swyu-read-list">
+              {stage.read.map((slug) => {
+                const guide = getGuide(slug);
+                if (!guide) return null;
+                const isOpen = openGuide === slug;
+                return (
+                  <li key={slug}>
+                    <button
+                      type="button"
+                      className={`swyu-read-item ${isOpen ? 'is-open' : ''}`}
+                      onClick={() => setOpenGuide(isOpen ? null : slug)}
+                      aria-expanded={isOpen}
+                    >
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 6 L15 12 L9 18" />
+                      </svg>
+                      {guide.title}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div>
@@ -341,6 +362,16 @@ function JourneyStage({ stage }: { stage: { n: number; title: string; read: stri
             </div>
           </div>
         </div>
+
+        {openGuide && (
+          <div className="journey-guide-card" key={openGuide}>
+            <GuideView
+              slug={openGuide}
+              onBack={() => setOpenGuide(null)}
+              backLabel={`Close — back to “${stage.title}”`}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

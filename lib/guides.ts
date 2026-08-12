@@ -625,8 +625,42 @@ export const GUIDES: Record<string, Guide> = {
   },
 
   // =========================================================================
-  // Shared / journey extras (also referenced from the picker)
+  // Support map extras
   // =========================================================================
+  'symptom-evidence-starter': {
+    title: 'Symptom evidence starter',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Assessments run on evidence, and evidence beats memory — especially an ADHD memory under pressure. You don\'t need a dossier; you need a page of specific, dated examples sorted into a few categories.',
+      },
+      { type: 'h', text: 'Start with six categories' },
+      {
+        type: 'list',
+        items: [
+          'Focus & attention — drifting mid-task, rereading, unfinished work.',
+          'Time — lateness, lost hours, deadline cliff-edges.',
+          'Organisation — piles, chaos, abandoned systems.',
+          'Memory — forgotten commitments, lost items, blank moments.',
+          'Impulsivity — spending, blurting, snap decisions.',
+          'Emotions & energy — quick frustration, burnout cycles, restlessness.',
+        ],
+      },
+      { type: 'h', text: 'For each category, capture' },
+      {
+        type: 'list',
+        items: [
+          'One or two recent examples, as specific as you can ("last Tuesday I…").',
+          'One older example — ideally reaching back to school or childhood.',
+          'The cost: what it broke, lost, or nearly lost you.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Add to it whenever something happens — a two-line note in your phone is perfect. A month of casual collecting usually produces stronger evidence than a weekend of trying to remember everything at once.',
+      },
+    ],
+  },
   'route-explainer': {
     title: 'Route explainer',
     blocks: [

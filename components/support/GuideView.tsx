@@ -38,11 +38,11 @@ function Block({ block }: { block: GuideBlock }) {
 export default function GuideView({
   slug,
   onBack,
-  situationTitle,
+  backLabel,
 }: {
   slug: string;
   onBack: () => void;
-  situationTitle: string;
+  backLabel: string;
 }) {
   const guide = getGuide(slug);
   const headingRef = React.useRef<HTMLHeadingElement>(null);
@@ -61,7 +61,7 @@ export default function GuideView({
         <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
           <path d="M15 6 L9 12 L15 18" />
         </svg>
-        Back to &ldquo;{situationTitle}&rdquo;
+        {backLabel}
       </button>
 
       <div className="swyu-panel-eyebrow" style={{ marginTop: 18 }}>

@@ -138,25 +138,26 @@ export const SITUATIONS: Situation[] = [
   },
 ];
 
+// `read` entries are guide slugs (see lib/guides.ts), same as SITUATIONS.
 export const JOURNEY = [
   {
     n: 1, title: 'Start Here',
-    read: ['Route explainer', 'What to do first'],
+    read: ['route-explainer', 'what-to-do-first'],
     downloads: ['GP Appointment Prep Sheet', 'Phone Script Bank'],
   },
   {
     n: 2, title: 'Prepare Your Evidence',
-    read: ['Symptom evidence starter', 'What examples count?'],
+    read: ['symptom-evidence-starter', 'what-examples-to-collect'],
     downloads: ['Full Evidence Builder', 'Childhood & Adult Worksheet', 'Referral Evidence Summary'],
   },
   {
     n: 3, title: 'While You Wait',
-    read: ['Waiting survival tips', 'Overwhelm support'],
+    read: ['while-you-wait', 'overwhelm-support'],
     downloads: ['Weekly Survival Planner', 'Admin Tracker', 'Referral Status Tracker'],
   },
   {
     n: 4, title: 'Serious Admin',
-    read: ['Provider questions', 'Shared care overview'],
+    read: ['provider-questions', 'shared-care-overview'],
     downloads: ['Provider Comparison Spreadsheet', 'Medication / Titration Notes', 'Private Cost Planner'],
   },
 ];

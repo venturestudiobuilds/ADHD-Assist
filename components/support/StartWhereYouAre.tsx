@@ -50,7 +50,7 @@ export default function StartWhereYouAre() {
             key={openGuide}
             slug={openGuide}
             onBack={() => setOpenGuide(null)}
-            situationTitle={current.title}
+            backLabel={`Back to “${current.title}”`}
           />
         ) : (
           <div className="swyu-panel-inner" key={current.id}>

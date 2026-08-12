@@ -2156,3 +2156,27 @@ button:focus-visible {
   color: var(--ink);
   margin: 4px 0 14px;
 }
+
+/* Support map — expanded guide card inside a journey stage */
+.journey-guide-card {
+  margin-top: 20px;
+  background: white;
+  border: 3px solid var(--ink);
+  border-radius: 22px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 0 var(--ink), 0 16px 26px rgba(31, 95, 107, 0.14);
+  animation: panelFade 0.32s ease-out;
+}
+@media (max-width: 600px) {
+  .journey-guide-card { padding: 20px 18px; }
+}
+
+/* Read-item pill in its expanded state */
+.swyu-read-item.is-open {
+  background: var(--coral);
+  color: white;
+}
+.swyu-read-item.is-open svg {
+  color: white;
+  transform: rotate(90deg);
+}
