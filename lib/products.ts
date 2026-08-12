@@ -11,84 +11,107 @@ export type Product = {
   items: string[];
   cta: string;
   highlight: boolean;
-  /** Price in pence (GBP). 0 = free direct download, no checkout. */
+  /** Price in pence (GBP). 0 = free (email capture, no checkout). */
   price: number;
   /** Filename served from content/packs/ after purchase (or freely if price=0). */
   file: string;
+  /** The product's dedicated sales page. */
+  route: string;
 };
 
 export const CURRENCY = 'gbp';
 
 export const PRODUCTS: Product[] = [
   {
-    slug: 'mini-starter-pack',
+    slug: 'free-pack',
     label: 'Free starter',
     highlight: false,
-    title: 'Mini Starter Pack',
-    desc: 'A taste of everything, enough to get you to your GP appointment.',
+    title: 'The ADHD Appointment Panic Pack',
+    desc: 'A calm little starter kit for preparing for your first GP conversation. 6 sections. Free. No catch.',
     items: [
-      'Mini route explainer',
-      'GP prep starter',
-      'Brain-freeze script',
-      'Symptom evidence starter',
-      'One overwhelm prompt',
+      'Routes explainer (NHS / RTC / private)',
+      'GP appointment prep sheet',
+      'Brain-freeze phone script',
+      'Tiny symptom evidence starter',
+      'One AI prompt for overwhelm',
     ],
-    cta: 'Download free',
+    cta: 'Get it free',
     price: 0,
-    file: 'mini-starter-pack.zip',
+    file: 'free-pack.zip',
+    route: '/free',
   },
   {
-    slug: 'gp-appointment-prep-kit',
+    slug: 'starter-pack',
     label: 'Starter Pack',
     highlight: false,
-    title: 'GP Appointment Prep Kit',
-    desc: 'Everything you need for the GP step, printed and ready.',
+    title: 'Diagnosis Prep Starter Pack',
+    desc: 'Your step-by-step system for getting from "I think I have ADHD" to a GP referral.',
     items: [
-      'GP prep sheet',
-      'Phone scripts',
-      'Online form wording',
-      'Appointment summary template',
-      'Follow-up checklist',
+      'Full GP appointment prep template',
+      '8-category symptom evidence builder',
+      'Childhood & adult examples worksheet',
+      '9 phone scripts for every scenario',
+      '9-prompt AI pack + follow-up checklist',
     ],
-    cta: 'Buy pack',
-    price: 700, // £7.00
-    file: 'gp-appointment-prep-kit.zip',
+    cta: 'View pack',
+    price: 900, // £9
+    file: 'starter-pack.zip',
+    route: '/starter-pack',
   },
   {
-    slug: 'full-diagnosis-prep-pack',
+    slug: 'full-pack',
     label: 'Complete Pack',
     highlight: true,
     title: 'Full Diagnosis Prep & Survival Pack',
-    desc: 'The whole thing, from suspicion to titration. Most people start here.',
+    desc: 'The complete 15-section system, from first GP appointment to medication titration.',
     items: [
-      'Evidence builder',
-      'Childhood / adult worksheet',
-      'Provider tracker',
-      'Referral tracker',
+      'Everything in the Starter Pack',
+      'Provider comparison template',
+      'Referral status + admin trackers',
       'Weekly survival planner',
-      'AI prompt pack',
-      'Shared care questions',
+      'Assessment day prep & follow-up',
+      'Shared care + titration notes',
+      '20-prompt AI library',
     ],
-    cta: 'Buy pack',
-    price: 1900, // £19.00
-    file: 'full-diagnosis-prep-pack.zip',
+    cta: 'View pack',
+    price: 2400, // £24
+    file: 'full-pack.zip',
+    route: '/full-pack',
   },
   {
-    slug: 'admin-dashboard-addon',
-    label: 'Tracker Pack',
+    slug: 'admin-system',
+    label: 'Tracker',
     highlight: false,
-    title: 'Admin Dashboard Add-On',
-    desc: 'For people who want a real tracking system. Editable spreadsheet or Notion.',
+    title: 'ADHD Admin System',
+    desc: 'Your whole process tracked, in one place. Browser app, Google Sheets file, and Notion guide.',
     items: [
-      'Provider comparison tracker',
-      'Referral status tracker',
-      'Appointment log',
-      'Medication / titration notes',
-      'Document checklist',
+      '8 tabs — one for every stage',
+      'Milestone dashboard + admin tracker',
+      'Referral log & provider compare',
+      'Appointment + medication logs',
+      'Saves automatically in your browser',
     ],
-    cta: 'Buy pack',
-    price: 900, // £9.00
-    file: 'admin-dashboard-addon.zip',
+    cta: 'View tracker',
+    price: 1200, // £12
+    file: 'admin-system.zip',
+    route: '/admin-system',
+  },
+  {
+    slug: 'bundle',
+    label: 'Bundle',
+    highlight: false,
+    title: 'Full Pack + Admin System',
+    desc: 'The complete PDF system and the interactive tracker, together.',
+    items: [
+      'Full 15-section PDF pack',
+      'Interactive browser tracker',
+      'Google Sheets / Excel file',
+      'Notion workspace build guide',
+    ],
+    cta: 'View bundle',
+    price: 3500, // £35
+    file: 'bundle.zip',
+    route: '/bundle',
   },
 ];
 
