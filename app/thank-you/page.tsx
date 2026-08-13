@@ -4,13 +4,13 @@ import SiteFooter from '@/components/SiteFooter';
 import { getProduct } from '@/lib/products';
 
 export const metadata: Metadata = {
-  title: 'ADHD Assist — Thank you',
+  title: 'ADHD Assist - Thank you',
   robots: { index: false },
 };
 
 // Thank-you page for the FREE pack (email capture flow). Paid products land
 // on /support/success after Stripe Checkout instead. The email itself never
-// appears in this URL — it travels in the /api/subscribe POST body only.
+// appears in this URL - it travels in the /api/subscribe POST body only.
 export default async function ThankYouPage({
   searchParams,
 }: {
@@ -36,7 +36,7 @@ export default async function ThankYouPage({
               One useful step, <span style={{ color: 'var(--coral)' }}>sorted.</span>
             </h1>
             <p className="success-body">
-              Thanks — <strong>{product.title}</strong> is on its way to your inbox. You can also
+              Thanks - <strong>{product.title}</strong> is on its way to your inbox. You can also
               grab it right now:
             </p>
             <a className="download-link" href={`/api/download?slug=${product.slug}`}>

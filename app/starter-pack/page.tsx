@@ -4,18 +4,18 @@ import ProductPageShell from '@/components/ProductPageShell';
 import BuyButton from '@/components/BuyButton';
 
 export const metadata: Metadata = {
-  title: 'Diagnosis Prep Starter Pack (£9) — ADHD Assist',
+  title: 'Diagnosis Prep Starter Pack (£9) - ADHD Assist',
   description:
-    'Your step-by-step system for getting from "I think I have ADHD" to a GP referral — without losing your mind in the process.',
+    'Your step-by-step system for getting from "I think I have ADHD" to a GP referral - without losing your mind in the process.',
 };
 
 const SECTIONS = [
-  { n: 1, title: 'Full GP Appointment Prep Template', desc: 'Parts A–H — history, current struggles, opening statement, questions, things to bring. 2× longer than the free version.' },
-  { n: 2, title: 'Full Symptom Evidence Builder', desc: '8 categories with example tables — focus, hyperfocus, time management, organisation, memory, emotional regulation, impulsivity, restlessness.' },
+  { n: 1, title: 'Full GP Appointment Prep Template', desc: 'Parts A–H - history, current struggles, opening statement, questions, things to bring. 2× longer than the free version.' },
+  { n: 2, title: 'Full Symptom Evidence Builder', desc: '8 categories with example tables - focus, hyperfocus, time management, organisation, memory, emotional regulation, impulsivity, restlessness.' },
   { n: 3, title: 'Childhood & Adult Examples Worksheet', desc: 'Structured by age bracket. Helps you find the examples assessors actually ask for.' },
-  { n: 4, title: 'Phone Scripts: Every Scenario', desc: '9 scripts — booking, double appointments, mind going blank, online forms, chasing referrals, calling private providers, dismissive GP responses.' },
+  { n: 4, title: 'Phone Scripts: Every Scenario', desc: '9 scripts - booking, double appointments, mind going blank, online forms, chasing referrals, calling private providers, dismissive GP responses.' },
   { n: 5, title: 'Appointment Follow-Up Checklist', desc: "What to do in the same hour, within 48 hours, within 2 weeks, and what to do if it didn't go the way you hoped." },
-  { n: 6, title: 'AI Prompt Pack — Appointment & Admin Edition', desc: '9 copy-paste prompts for ChatGPT, Claude, or Gemini. For every pre-appointment scenario.' },
+  { n: 6, title: 'AI Prompt Pack - Appointment & Admin Edition', desc: '9 copy-paste prompts for ChatGPT, Claude, or Gemini. For every pre-appointment scenario.' },
   { n: 7, title: 'Referral Document Checklist', desc: 'Everything to gather, what to ask your GP for, a contact tracker, and a provider information record.' },
 ];
 
@@ -23,7 +23,7 @@ const EXTRAS_VS_FREE = [
   'GP prep template is 2× longer with history section and personalised opening statement',
   'Symptom evidence covers 8 categories (free = 6), adds hyperfocus',
   '9 phone scripts (free = 5) including chasing referrals and private provider calls',
-  'Childhood worksheet is entirely new — not in free pack',
+  'Childhood worksheet is entirely new - not in free pack',
   '9 AI prompts (free = 1) covering all pre-appointment scenarios',
   'Referral document checklist and contact tracker',
 ];
@@ -50,10 +50,10 @@ export default function StarterPack() {
             <span style={{ color: 'var(--coral)' }}>Starter Pack</span>
           </h1>
           <p style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', color: 'var(--ink)', opacity: 0.8, fontWeight: 600, maxWidth: 560, margin: '0 auto 32px' }}>
-            Your step-by-step system for getting from &ldquo;I think I have ADHD&rdquo; to a GP referral — without losing your mind in the process.
+            Your step-by-step system for getting from &ldquo;I think I have ADHD&rdquo; to a GP referral - without losing your mind in the process.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <BuyButton slug="starter-pack">Get the Starter Pack — £9 →</BuyButton>
+            <BuyButton slug="starter-pack">Get the Starter Pack - £9 →</BuyButton>
             <Link className="cta-button cta-button-ghost" style={{ textDecoration: 'none' }} href="/free">
               Try the free pack first
             </Link>
@@ -135,13 +135,13 @@ export default function StarterPack() {
 
         {/* CTA + upsell */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center' }}>
-          <BuyButton slug="starter-pack">Get the Starter Pack — £9 →</BuyButton>
+          <BuyButton slug="starter-pack">Get the Starter Pack - £9 →</BuyButton>
           <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.65, margin: 0 }}>
             Or step up to the{' '}
             <Link href="/full-pack" style={{ color: 'var(--coral)', fontWeight: 700, textDecoration: 'underline' }}>
               Full Pack (£24)
             </Link>{' '}
-            — everything from referral to titration.
+            - everything from referral to titration.
           </p>
         </div>
       </div>

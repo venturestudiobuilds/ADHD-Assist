@@ -1,6 +1,6 @@
 'use client';
 
-// Landing screen — "WHICH WAY NOW?" hero with the circular maze metaphor
+// Landing screen - "WHICH WAY NOW?" hero with the circular maze metaphor
 // and a clear CTA through to the support hub.
 
 import React from 'react';
@@ -73,7 +73,7 @@ export default function Hero() {
           {/* Thought bubbles scattered around the stage */}
           <ThoughtBubbles />
 
-          {/* Hero headline — bold, two-line, sits above the maze. */}
+          {/* Hero headline - bold, two-line, sits above the maze. */}
           <div
             style={{
               position: 'relative',

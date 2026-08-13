@@ -4,7 +4,7 @@ import ProductPageShell from '@/components/ProductPageShell';
 import BuyButton from '@/components/BuyButton';
 
 export const metadata: Metadata = {
-  title: 'ADHD Admin System (£12) — ADHD Assist',
+  title: 'ADHD Admin System (£12) - ADHD Assist',
   description:
     'Your whole diagnosis process tracked in one place. Interactive browser tracker, Google Sheets file, and Notion build guide.',
 };
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const TABS_DESC = [
   { icon: '📊', label: 'Dashboard', desc: 'Milestone tracker with live progress bar. "What to do next" guide for when you\'re stuck.' },
   { icon: '✅', label: 'Admin Tracker', desc: '23 pre-loaded tasks across all stages. Add your own. Status dropdowns that show green when done.' },
-  { icon: '📅', label: 'Referral Log', desc: 'Referral details block + running contact log. Every call, letter, and email — dated.' },
+  { icon: '📅', label: 'Referral Log', desc: 'Referral details block + running contact log. Every call, letter, and email - dated.' },
   { icon: '🏥', label: 'Provider Compare', desc: '22-row criteria, 3 providers side by side. Includes Right to Choose warning.' },
   { icon: '📁', label: 'Documents', desc: 'All required documents pre-listed across 3 stages. Priority-coded. Status dropdowns.' },
   { icon: '📝', label: 'Appointment Log', desc: 'Add a row for every appointment. Type dropdown, 6 columns including "how it felt".' },
@@ -47,9 +47,9 @@ export default function AdminSystemPage() {
             Also available as a Google Sheets file and Notion workspace.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 8 }}>
-            <BuyButton slug="admin-system">Get the Admin System — £12 →</BuyButton>
+            <BuyButton slug="admin-system">Get the Admin System - £12 →</BuyButton>
             <Link className="cta-button cta-button-ghost" style={{ textDecoration: 'none' }} href="/bundle">
-              Bundle with Full Pack — £35
+              Bundle with Full Pack - £35
             </Link>
           </div>
           <p style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.5 }}>
@@ -59,7 +59,7 @@ export default function AdminSystemPage() {
 
         {/* What's in each tab */}
         <h2 style={{ fontFamily: "'Archivo Black', sans-serif", fontSize: 'clamp(22px,2.6vw,32px)', letterSpacing: '-0.03em', color: 'var(--ink)', margin: '0 0 20px' }}>
-          8 tabs — one for every stage
+          8 tabs - one for every stage
         </h2>
         <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12, marginBottom: 48 }}>
           {TABS_DESC.map((t) => (
@@ -83,7 +83,7 @@ export default function AdminSystemPage() {
         {/* Demo placeholder.
             The original design embedded the full <AdminSystem /> app here as a live demo,
             with an open TODO about it being ungated (the entire paid product, free, with
-            autosave). That component hasn't been ported to this codebase yet — when it is,
+            autosave). That component hasn't been ported to this codebase yet - when it is,
             embed a GATED version here (limited tabs / no export / demo watermark). */}
         <div style={{ marginBottom: 48 }}>
           <h2 style={{ fontFamily: "'Archivo Black', sans-serif", fontSize: 'clamp(22px,2.6vw,32px)', letterSpacing: '-0.03em', color: 'var(--ink)', margin: '0 0 8px' }}>
@@ -106,7 +106,7 @@ export default function AdminSystemPage() {
               Interactive demo coming soon
             </p>
             <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, margin: 0, maxWidth: 420, marginInline: 'auto' }}>
-              The full tracker ships with your download today — the in-page preview is on its way.
+              The full tracker ships with your download today - the in-page preview is on its way.
             </p>
           </div>
         </div>
@@ -126,12 +126,12 @@ export default function AdminSystemPage() {
             Like what you see?
           </p>
           <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.75, margin: '0 0 20px' }}>
-            The download includes the browser app, a Google Sheets / Excel file, and a Notion build guide — so you can use whichever format suits you.
+            The download includes the browser app, a Google Sheets / Excel file, and a Notion build guide - so you can use whichever format suits you.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <BuyButton slug="admin-system">Get the Admin System — £12 →</BuyButton>
+            <BuyButton slug="admin-system">Get the Admin System - £12 →</BuyButton>
             <Link className="cta-button cta-button-ghost" style={{ textDecoration: 'none' }} href="/bundle">
-              Bundle with Full Pack — £35
+              Bundle with Full Pack - £35
             </Link>
           </div>
         </div>

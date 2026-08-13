@@ -1,6 +1,6 @@
 'use client';
 
-// ScrollNudges — gentle, scroll-triggered supportive thought bubbles.
+// ScrollNudges - gentle, scroll-triggered supportive thought bubbles.
 // One at a time, fades in / holds / fades out, each section fires once.
 // Decorative only (aria-hidden); page works perfectly without it.
 

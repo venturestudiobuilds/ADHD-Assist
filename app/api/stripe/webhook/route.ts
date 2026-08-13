@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { getStripe } from '@/lib/stripe';
 
-// POST /api/stripe/webhook — Stripe event receiver.
+// POST /api/stripe/webhook - Stripe event receiver.
 // Configure the endpoint in the Stripe Dashboard pointing at
 //   https://<your-domain>/api/stripe/webhook
 // subscribed to: checkout.session.completed

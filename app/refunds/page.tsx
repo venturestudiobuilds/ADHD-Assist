@@ -4,7 +4,7 @@ import LegalPage from '@/components/LegalPage';
 import { BUSINESS, LEGAL_DATES } from '@/lib/legal';
 
 export const metadata: Metadata = {
-  title: 'Refund Policy — ADHD Assist',
+  title: 'Refund Policy - ADHD Assist',
   description: 'When and how ADHD Assist refunds digital pack purchases.',
 };
 
@@ -15,7 +15,7 @@ export default function RefundsPage() {
       <p>
         If a pack is broken, not as described, or genuinely isn&rsquo;t what you needed, email
         us within 14 days of purchase at{' '}
-        <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a> and we&rsquo;ll make it right —
+        <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a> and we&rsquo;ll make it right -
         usually with a replacement file or a refund. We&rsquo;d rather refund a pack than have
         someone at a hard moment feel ripped off.
       </p>
@@ -29,7 +29,7 @@ export default function RefundsPage() {
         </li>
         <li>
           <strong>The 14-day cancellation right</strong> (Consumer Contracts Regulations 2013):
-          for digital content this ends when delivery begins with your express consent — which
+          for digital content this ends when delivery begins with your express consent - which
           you give at checkout. So once your download is made available, the automatic
           cancellation right no longer applies. Our goodwill policy below goes further than
           this legal position.

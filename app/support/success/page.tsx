@@ -5,7 +5,7 @@ import { getStripe } from '@/lib/stripe';
 import { getProduct } from '@/lib/products';
 
 export const metadata: Metadata = {
-  title: 'ADHD Assist — Thank you',
+  title: 'ADHD Assist - Thank you',
   robots: { index: false },
 };
 
@@ -55,7 +55,7 @@ export default async function SuccessPage({
               One useful step, <span style={{ color: 'var(--coral)' }}>sorted.</span>
             </h1>
             <p className="success-body">
-              Thanks — your <strong>{packTitle}</strong> is ready. Download it below (a receipt is on
+              Thanks - your <strong>{packTitle}</strong> is ready. Download it below (a receipt is on
               its way to your email). This link stays valid, so you can come back to it.
             </p>
             <a className="download-link" href={downloadHref}>

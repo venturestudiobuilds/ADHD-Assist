@@ -1,7 +1,7 @@
 'use client';
 
 // Interactive CIRCULAR (theta) ADHD labyrinth.
-// A seeded polar maze used as an AMBIENT VISUAL METAPHOR for ADHD confusion —
+// A seeded polar maze used as an AMBIENT VISUAL METAPHOR for ADHD confusion -
 // not a game. The brain character starts in the CENTRE and is nudged around the
 // corridors with the joystick, blocked by walls. There is no goal, no
 // entrance/exit, and no win/lose state. The wall data (inward / cw / outerWall
@@ -49,7 +49,7 @@ function seedRng(seed: number) {
 // --- Polar maze generation (recursive backtracker → perfect maze) ---
 // inward[r][s] = wall between cell (r,s) and the inner ring (only meaningful for r>=1).
 // cw[r][s]     = wall between cell (r,s) and cell (r, (s+1)%S).
-// outerWall[s] = boundary wall on the outer edge (kept fully closed — no exit).
+// outerWall[s] = boundary wall on the outer edge (kept fully closed - no exit).
 function generatePolarMaze(rings: number, sectors: number[], seed: number, circBias: number): MazeData {
   const rng = seedRng(seed);
   const inward = sectors.map((S) => new Array(S).fill(true));
@@ -123,7 +123,7 @@ function generatePolarMaze(rings: number, sectors: number[], seed: number, circB
     stack.push({ r: n.r, s: n.s });
   }
 
-  // Fully closed outer boundary — the labyrinth has no exit. The maze is an
+  // Fully closed outer boundary - the labyrinth has no exit. The maze is an
   // ambient metaphor for ADHD confusion, not a game with a start/finish.
   const Souter = sectors[rings - 1];
   const outerWall = new Array(Souter).fill(true);
@@ -246,7 +246,7 @@ function resolvePolarCollision(brain: Brain, maze: MazeData, brainRad: number) {
       }
     }
 
-    // OUTER arc wall (between this cell and ring+1) — only for non-outermost rings
+    // OUTER arc wall (between this cell and ring+1) - only for non-outermost rings
     if (ring < rings - 1) {
       const outerArcR = (ring + 1) * cwPx;
       const Snext = maze.sectors[ring + 1];
@@ -370,7 +370,7 @@ function buildWallPath(maze: MazeData) {
 
 function buildOuterRingPath(maze: MazeData) {
   // Draw the outer boundary as a series of arcs, skipping any sectors flagged
-  // as "gaps" (none in production — the maze has no exit by design).
+  // as "gaps" (none in production - the maze has no exit by design).
   const { rings, sectors, outerGaps } = maze;
   const S = sectors[rings - 1];
   const R = MAZE_RADIUS;
@@ -429,7 +429,7 @@ export default function Maze({
   const trailRef = React.useRef<{ x: number; y: number; life: number }[]>([]);
 
   // Track how long the user has actively explored. After a short while we let
-  // the parent gently emphasise the support CTA (no win state — just a nudge).
+  // the parent gently emphasise the support CTA (no win state - just a nudge).
   const onEngageRef = React.useRef(onEngage);
   onEngageRef.current = onEngage;
   const engageRef = React.useRef({ frames: 0, fired: false });
@@ -649,7 +649,7 @@ export default function Maze({
               />
             ))}
 
-            {/* Walls — drawn twice for 2.5D depth */}
+            {/* Walls - drawn twice for 2.5D depth */}
             <g
               style={{
                 filter:
@@ -678,11 +678,11 @@ export default function Maze({
               />
             ))}
 
-            {/* Centre marker — soft disc marking the brain's home (no goal) */}
+            {/* Centre marker - soft disc marking the brain's home (no goal) */}
             <circle cx={MAZE_CX} cy={MAZE_CY} r={cwPx * 0.2} fill="rgba(255, 179, 193, 0.30)" />
           </svg>
 
-          {/* Brain — DOM overlay for SVG-in-HTML composition */}
+          {/* Brain - DOM overlay for SVG-in-HTML composition */}
           <div
             className="brain"
             style={{

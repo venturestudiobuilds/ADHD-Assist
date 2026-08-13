@@ -1,6 +1,6 @@
 'use client';
 
-// Purchase CTA for product pages — creates a Stripe Checkout Session and
+// Purchase CTA for product pages - creates a Stripe Checkout Session and
 // redirects to Stripe's hosted checkout.
 
 import React from 'react';

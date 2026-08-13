@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Unknown product' }, { status: 404 });
   }
   if (product.price === 0) {
-    return NextResponse.json({ error: 'This pack is free — no checkout needed' }, { status: 400 });
+    return NextResponse.json({ error: 'This pack is free - no checkout needed' }, { status: 400 });
   }
 
   try {

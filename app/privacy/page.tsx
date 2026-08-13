@@ -4,7 +4,7 @@ import LegalPage from '@/components/LegalPage';
 import { BUSINESS, LEGAL_DATES } from '@/lib/legal';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — ADHD Assist',
+  title: 'Privacy Policy - ADHD Assist',
   description: 'How ADHD Assist collects, uses and protects your personal data.',
 };
 
@@ -22,19 +22,19 @@ export default function PrivacyPage() {
       <p>We deliberately collect as little as possible:</p>
       <ul>
         <li>
-          <strong>Email address</strong> — if you request the free pack. Used to deliver the pack
+          <strong>Email address</strong> - if you request the free pack. Used to deliver the pack
           and, only if the signup wording says so, to send occasional related emails. Lawful
           basis: consent, which you can withdraw at any time via the unsubscribe link in any
           email or by contacting us.
         </li>
         <li>
-          <strong>Purchase information</strong> — when you buy a pack, our payment provider
+          <strong>Purchase information</strong> - when you buy a pack, our payment provider
           Stripe processes your payment details and shares with us your email address and order
           details (never your full card number). Lawful basis: performance of a contract, and
           legal obligation for tax and accounting records.
         </li>
         <li>
-          <strong>Technical logs</strong> — our hosting provider (Vercel) records standard
+          <strong>Technical logs</strong> - our hosting provider (Vercel) records standard
           server logs (IP address, browser type, pages requested) for security and to keep the
           site working. Lawful basis: legitimate interests.
         </li>
@@ -42,21 +42,21 @@ export default function PrivacyPage() {
       <p>
         We do not run analytics or advertising trackers, we do not sell or share personal data
         for marketing, and we never ask for health information. Anything you type into the
-        downloaded tools (worksheets, the Admin System tracker) stays on your own device — it is
+        downloaded tools (worksheets, the Admin System tracker) stays on your own device - it is
         never sent to us.
       </p>
 
       <h2>Who we share data with</h2>
       <ul>
         <li>
-          <strong>Stripe</strong> (payments) — see{' '}
+          <strong>Stripe</strong> (payments) - see{' '}
           <a href="https://stripe.com/gb/privacy" rel="noopener noreferrer" target="_blank">
             Stripe&rsquo;s privacy policy
           </a>
           . Stripe may set cookies on its checkout pages.
         </li>
         <li>
-          <strong>Vercel</strong> (hosting) — see{' '}
+          <strong>Vercel</strong> (hosting) - see{' '}
           <a href="https://vercel.com/legal/privacy-policy" rel="noopener noreferrer" target="_blank">
             Vercel&rsquo;s privacy policy
           </a>
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         This site does not set advertising or analytics cookies. Stripe sets strictly necessary
         cookies during checkout on its own pages. The Admin System app (if you buy it) stores
         your entries in your own browser&rsquo;s local storage, on your device, under your
-        control — clearing browser data removes it.
+        control - clearing browser data removes it.
       </p>
 
       <h2>How long we keep data</h2>

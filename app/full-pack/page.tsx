@@ -4,20 +4,20 @@ import ProductPageShell from '@/components/ProductPageShell';
 import BuyButton from '@/components/BuyButton';
 
 export const metadata: Metadata = {
-  title: 'Full ADHD Diagnosis Prep & Survival Pack (£24) — ADHD Assist',
+  title: 'Full ADHD Diagnosis Prep & Survival Pack (£24) - ADHD Assist',
   description:
-    'The complete system for getting from "I think I have ADHD" to answers — 15 sections, from first GP appointment to medication titration. UK edition.',
+    'The complete system for getting from "I think I have ADHD" to answers - 15 sections, from first GP appointment to medication titration. UK edition.',
 };
 
 const STAGES = [
   {
     label: 'Before you see your GP',
     sections: [
-      { n: 1, title: 'Understanding Your Routes', desc: 'A full plain-English guide — NHS, Right to Choose (England), and Private — with comparison table and decision framework.' },
+      { n: 1, title: 'Understanding Your Routes', desc: 'A full plain-English guide - NHS, Right to Choose (England), and Private - with comparison table and decision framework.' },
       { n: 2, title: 'Full GP Appointment Prep Template', desc: 'Parts A–H: history, struggles, opening statement, questions. Everything from the Starter Pack.' },
       { n: 3, title: 'Full Symptom Evidence Builder', desc: '8 categories with example tables and pattern summaries.' },
       { n: 4, title: 'Childhood & Adult Examples Worksheet', desc: 'Primary school through early adulthood. The "always" list. Who could confirm your childhood.' },
-      { n: 5, title: 'Phone Scripts: Every Scenario', desc: '10 scripts — includes Right to Choose-specific script not in Starter Pack.' },
+      { n: 5, title: 'Phone Scripts: Every Scenario', desc: '10 scripts - includes Right to Choose-specific script not in Starter Pack.' },
     ],
   },
   {
@@ -25,7 +25,7 @@ const STAGES = [
     sections: [
       { n: 6, title: 'Provider Comparison Template', desc: '22-criteria, 3-provider side-by-side. Cost, format, GMC registration, shared care policy.' },
       { n: 7, title: 'Referral Status Tracker', desc: 'A running log of every contact, confirmation, and communication. Milestone dates. Key contacts.' },
-      { n: 8, title: 'Admin Tracker', desc: 'Full task checklist across all stages — pre-GP through treatment. Your whole process in one list.' },
+      { n: 8, title: 'Admin Tracker', desc: 'Full task checklist across all stages - pre-GP through treatment. Your whole process in one list.' },
     ],
   },
   {
@@ -46,7 +46,7 @@ const STAGES = [
     label: 'Diagnosis & medication',
     sections: [
       { n: 13, title: 'Shared Care Question Sheet', desc: 'Questions to ask both your GP and private provider about NHS prescribing.' },
-      { n: 14, title: 'Medication & Titration Notes', desc: '4-week daily log — focus, mood, energy, appetite, sleep, side effects. Questions tracker.' },
+      { n: 14, title: 'Medication & Titration Notes', desc: '4-week daily log - focus, mood, energy, appetite, sleep, side effects. Questions tracker.' },
     ],
   },
   {
@@ -92,15 +92,15 @@ export default function FullPack() {
             <span style={{ color: 'var(--coral)' }}>Prep &amp; Survival Pack</span>
           </h1>
           <p style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', color: 'var(--ink)', opacity: 0.8, fontWeight: 600, maxWidth: 600, margin: '0 auto 10px' }}>
-            The complete system for getting from &ldquo;I think I have ADHD&rdquo; to answers — without holding the whole process in your head.
+            The complete system for getting from &ldquo;I think I have ADHD&rdquo; to answers - without holding the whole process in your head.
           </p>
           <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.6, maxWidth: 540, margin: '0 auto 32px' }}>
             15 sections. From first GP appointment to medication titration. UK edition.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <BuyButton slug="full-pack">Get the Full Pack — £24 →</BuyButton>
+            <BuyButton slug="full-pack">Get the Full Pack - £24 →</BuyButton>
             <Link className="cta-button cta-button-ghost" style={{ textDecoration: 'none' }} href="/bundle">
-              Bundle with Admin System — £35
+              Bundle with Admin System - £35
             </Link>
           </div>
           <p style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.5, marginTop: 12 }}>
@@ -108,7 +108,7 @@ export default function FullPack() {
           </p>
         </div>
 
-        {/* Sections grid, grouped by stage of the journey — matches the subhead above
+        {/* Sections grid, grouped by stage of the journey - matches the subhead above
             instead of dropping all 15 as one flat, equally-weighted wall. */}
         <h2 style={{ fontFamily: "'Archivo Black', sans-serif", fontSize: 'clamp(24px,3vw,36px)', letterSpacing: '-0.03em', color: 'var(--ink)', margin: '0 0 24px' }}>
           All 15 sections
@@ -200,7 +200,7 @@ export default function FullPack() {
 
         {/* CTA */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center' }}>
-          <BuyButton slug="full-pack">Get the Full Pack — £24 →</BuyButton>
+          <BuyButton slug="full-pack">Get the Full Pack - £24 →</BuyButton>
           <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.65, margin: 0 }}>
             Want a tracking tool too?{' '}
             <Link href="/bundle" style={{ color: 'var(--coral)', fontWeight: 700, textDecoration: 'underline' }}>

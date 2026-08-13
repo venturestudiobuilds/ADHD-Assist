@@ -1,4 +1,4 @@
-// Product catalogue — the single source of truth for the packs sold on the
+// Product catalogue - the single source of truth for the packs sold on the
 // site. Prices are in the smallest currency unit (pence) and are passed to
 // Stripe Checkout as inline price_data, so no Stripe Dashboard product setup
 // is required. Adjust prices/copy here.
@@ -85,7 +85,7 @@ export const PRODUCTS: Product[] = [
     title: 'ADHD Admin System',
     desc: 'Your whole process tracked, in one place. Browser app, Google Sheets file, and Notion guide.',
     items: [
-      '8 tabs — one for every stage',
+      '8 tabs - one for every stage',
       'Milestone dashboard + admin tracker',
       'Referral log & provider compare',
       'Appointment + medication logs',

@@ -4,7 +4,7 @@ import LegalPage from '@/components/LegalPage';
 import { BUSINESS, LEGAL_DATES } from '@/lib/legal';
 
 export const metadata: Metadata = {
-  title: 'Terms of Sale — ADHD Assist',
+  title: 'Terms of Sale - ADHD Assist',
   description: 'The terms that apply when you buy digital packs from ADHD Assist.',
 };
 
@@ -17,7 +17,7 @@ export default function TermsPage() {
         {BUSINESS.address}. Contact:{' '}
         <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>. These terms apply whenever you
         buy a digital product from this site. Buying free content or reading the site&rsquo;s
-        guidance doesn&rsquo;t create a contract — these terms are about purchases.
+        guidance doesn&rsquo;t create a contract - these terms are about purchases.
       </p>
 
       <h2>2. What you&rsquo;re buying</h2>
@@ -25,7 +25,7 @@ export default function TermsPage() {
         Our products are digital downloads: PDF workbooks, spreadsheet files, an offline browser
         app, and related guides. Each product page describes exactly what its pack contains, and
         the price shown at checkout (in GBP) is the total price. Products are delivered as a
-        download link immediately after successful payment — nothing is posted.
+        download link immediately after successful payment - nothing is posted.
       </p>
 
       <h2>3. Important: what these products are not</h2>
@@ -58,7 +58,7 @@ export default function TermsPage() {
         online purchase. For digital content, that right ends early once delivery begins with
         your agreement. At checkout you expressly consent to immediate delivery and acknowledge
         that <strong>once the download is made available, you lose the statutory 14-day right to
-        cancel</strong>. This doesn&rsquo;t affect your other statutory rights — see our{' '}
+        cancel</strong>. This doesn&rsquo;t affect your other statutory rights - see our{' '}
         <Link href="/refunds">Refund Policy</Link>, which is more generous than the legal
         minimum for faulty or misdescribed content.
       </p>
@@ -76,7 +76,7 @@ export default function TermsPage() {
       <p>
         Under the Consumer Rights Act 2015, digital content must be of satisfactory quality, fit
         for purpose, and as described. If a pack is faulty (for example, a corrupted file) or
-        doesn&rsquo;t match its description, contact us — you&rsquo;re entitled to a repair,
+        doesn&rsquo;t match its description, contact us - you&rsquo;re entitled to a repair,
         replacement, or refund.
       </p>
 
@@ -85,7 +85,7 @@ export default function TermsPage() {
         Nothing in these terms limits liability that cannot legally be limited. Beyond that, our
         total liability for any purchase is capped at the price you paid for it, and we
         aren&rsquo;t liable for losses arising from decisions made based on the educational
-        content — health decisions belong with qualified professionals (see section 3).
+        content - health decisions belong with qualified professionals (see section 3).
       </p>
 
       <h2>10. General</h2>

@@ -1,4 +1,4 @@
-// Free on-site guidance — the content behind every "Read on site" item in the
+// Free on-site guidance - the content behind every "Read on site" item in the
 // "Start where you are" picker. Educational and preparation-focused only:
 // nothing here is medical advice, and the site-wide disclaimer applies.
 //
@@ -19,20 +19,20 @@ export type Guide = {
 
 export const GUIDES: Record<string, Guide> = {
   // =========================================================================
-  // A — I think I might have ADHD
+  // A - I think I might have ADHD
   // =========================================================================
   'what-adhd-can-look-like': {
     title: 'What ADHD can look like',
     blocks: [
       {
         type: 'p',
-        text: 'ADHD is not just "being hyper" or "not trying hard enough". In adults it often looks quieter and messier than the stereotype — and many people reach their 20s, 30s, or 50s before anyone joins the dots.',
+        text: 'ADHD is not just "being hyper" or "not trying hard enough". In adults it often looks quieter and messier than the stereotype - and many people reach their 20s, 30s, or 50s before anyone joins the dots.',
       },
       { type: 'h', text: 'It can look like…' },
       {
         type: 'list',
         items: [
-          'Starting ten things and finishing none — then finishing one obsessively at 2am.',
+          'Starting ten things and finishing none - then finishing one obsessively at 2am.',
           'Time feeling like it has two settings: "now" and "not now".',
           'Rereading the same paragraph five times because your brain left the room.',
           'A pile of unopened letters you think about every single day.',
@@ -42,7 +42,7 @@ export const GUIDES: Record<string, Guide> = {
       },
       {
         type: 'p',
-        text: 'None of these alone mean you have ADHD — plenty of things can cause them. What matters for an assessment is a long-running pattern, across different areas of life, that gets in your way.',
+        text: 'None of these alone mean you have ADHD - plenty of things can cause them. What matters for an assessment is a long-running pattern, across different areas of life, that gets in your way.',
       },
       {
         type: 'note',
@@ -71,7 +71,7 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           'Deadlines, appointments, and admin quietly falling through the cracks.',
-          'Losing keys, phone, wallet — or losing track of entire projects.',
+          'Losing keys, phone, wallet - or losing track of entire projects.',
           'Starting strong, drifting off before the finish line.',
         ],
       },
@@ -81,12 +81,12 @@ export const GUIDES: Record<string, Guide> = {
         items: [
           'Feeling "driven by a motor", fidgeting, or a restless mind that never idles.',
           'Interrupting or blurting things out, then cringing about it later.',
-          'Impulse decisions — spending, quitting, saying yes — that cost you.',
+          'Impulse decisions - spending, quitting, saying yes - that cost you.',
         ],
       },
       {
         type: 'p',
-        text: 'The strongest evidence you can bring to an assessment is specific, real examples of these patterns — from childhood and from now. That\'s exactly what the packs on this site help you collect.',
+        text: 'The strongest evidence you can bring to an assessment is specific, real examples of these patterns - from childhood and from now. That\'s exactly what the packs on this site help you collect.',
       },
     ],
   },
@@ -100,11 +100,11 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'list',
         items: [
-          'ADHD UK (adhduk.co.uk) — clear guides on diagnosis routes, including Right to Choose.',
-          'AADD-UK (aadduk.org) — by and for adults with ADHD; includes a directory of local support groups.',
-          'ADHD Foundation (adhdfoundation.org.uk) — the neurodiversity charity; resources for all ages.',
-          'ADHDadultUK (adhdadult.uk) — evidence-based information and peer support for adults.',
-          'ADDISS (addiss.co.uk) — information and resources for families, teachers, and professionals.',
+          'ADHD UK (adhduk.co.uk) - clear guides on diagnosis routes, including Right to Choose.',
+          'AADD-UK (aadduk.org) - by and for adults with ADHD; includes a directory of local support groups.',
+          'ADHD Foundation (adhdfoundation.org.uk) - the neurodiversity charity; resources for all ages.',
+          'ADHDadultUK (adhdadult.uk) - evidence-based information and peer support for adults.',
+          'ADDISS (addiss.co.uk) - information and resources for families, teachers, and professionals.',
         ],
       },
       { type: 'h', text: 'If things feel heavy right now' },
@@ -124,17 +124,17 @@ export const GUIDES: Record<string, Guide> = {
       { type: 'h', text: '1. Standard NHS referral' },
       {
         type: 'p',
-        text: 'Free. Your GP refers you to a local NHS service. The main drawback is waiting time — in many areas the list runs to years, not months.',
+        text: 'Free. Your GP refers you to a local NHS service. The main drawback is waiting time - in many areas the list runs to years, not months.',
       },
       { type: 'h', text: '2. Right to Choose (England only)' },
       {
         type: 'p',
-        text: 'Still NHS-funded and free — but you choose the provider, including independent clinics with NHS contracts, which often have much shorter waits. Your GP sends the referral through the NHS e-Referral system. Availability has been changing in some areas recently, so check the current position for your area (ADHD UK keeps a good up-to-date guide).',
+        text: 'Still NHS-funded and free - but you choose the provider, including independent clinics with NHS contracts, which often have much shorter waits. Your GP sends the referral through the NHS e-Referral system. Availability has been changing in some areas recently, so check the current position for your area (ADHD UK keeps a good up-to-date guide).',
       },
       { type: 'h', text: '3. Private assessment' },
       {
         type: 'p',
-        text: 'Fastest, but you pay — typically several hundred pounds to over a thousand for assessment, plus ongoing costs if medication follows. Before booking, check whether your GP surgery accepts "shared care" from that provider, or NHS prescribing may not be an option afterwards.',
+        text: 'Fastest, but you pay - typically several hundred pounds to over a thousand for assessment, plus ongoing costs if medication follows. Before booking, check whether your GP surgery accepts "shared care" from that provider, or NHS prescribing may not be an option afterwards.',
       },
       {
         type: 'note',
@@ -144,20 +144,20 @@ export const GUIDES: Record<string, Guide> = {
   },
 
   // =========================================================================
-  // B — I haven't spoken to my GP yet
+  // B - I haven't spoken to my GP yet
   // =========================================================================
   'preparing-for-gp': {
     title: 'Preparing for your GP appointment',
     blocks: [
       {
         type: 'p',
-        text: 'A GP appointment is short — often under ten minutes. The goal is not to prove you have ADHD. It\'s to give your GP enough clear information to agree that an assessment makes sense.',
+        text: 'A GP appointment is short - often under ten minutes. The goal is not to prove you have ADHD. It\'s to give your GP enough clear information to agree that an assessment makes sense.',
       },
       { type: 'h', text: 'Before you book' },
       {
         type: 'list',
         items: [
-          'Ask for a double appointment if your surgery offers them — this conversation needs room.',
+          'Ask for a double appointment if your surgery offers them - this conversation needs room.',
           'You can book with any GP, but one you find easy to talk to helps.',
           'Decide your one-sentence opener in advance (see "What to say if you freeze").',
         ],
@@ -167,14 +167,14 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           'Your top 3 struggles, each with one concrete recent example.',
-          'One or two childhood examples — school reports are gold if you have them.',
+          'One or two childhood examples - school reports are gold if you have them.',
           'How it affects work, relationships, money, or health. Impact is what GPs listen for.',
           'What you\'re asking for: "I\'d like to be referred for an ADHD assessment."',
         ],
       },
       {
         type: 'p',
-        text: 'Paper beats memory here. If your mind goes blank, you can literally hand the sheet over — GPs read prepared notes all the time.',
+        text: 'Paper beats memory here. If your mind goes blank, you can literally hand the sheet over - GPs read prepared notes all the time.',
       },
     ],
   },
@@ -201,7 +201,7 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           'History: did versions of this show up at school? ("Bright but doesn\'t concentrate" on a report is evidence.)',
-          'Impact: what has it cost you — jobs, grades, relationships, money, self-esteem?',
+          'Impact: what has it cost you - jobs, grades, relationships, money, self-esteem?',
         ],
       },
       {
@@ -215,7 +215,7 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Brains that struggle under pressure struggle most in exactly these appointments. So don\'t rely on your brain — rely on a script. Practising one sentence out loud twice is enough.',
+        text: 'Brains that struggle under pressure struggle most in exactly these appointments. So don\'t rely on your brain - rely on a script. Practising one sentence out loud twice is enough.',
       },
       {
         type: 'script',
@@ -225,7 +225,7 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'script',
         label: 'If you blank completely',
-        text: '"Sorry — my mind\'s gone blank, which is actually part of why I\'m here. I\'ve written it all down, can I read from my notes?"',
+        text: '"Sorry - my mind\'s gone blank, which is actually part of why I\'m here. I\'ve written it all down, can I read from my notes?"',
       },
       {
         type: 'script',
@@ -240,7 +240,7 @@ export const GUIDES: Record<string, Guide> = {
   },
 
   // =========================================================================
-  // C — I have a GP appointment booked
+  // C - I have a GP appointment booked
   // =========================================================================
   'gp-appointment-guide': {
     title: 'GP appointment guide',
@@ -251,14 +251,14 @@ export const GUIDES: Record<string, Guide> = {
         items: [
           'One page only: top 3 struggles + examples, one childhood line, one impact line, your ask.',
           'Put the page (or your phone notes) somewhere you cannot forget it.',
-          'Set two alarms. Getting there is half the battle — this is a known ADHD failure point, not a character flaw.',
+          'Set two alarms. Getting there is half the battle - this is a known ADHD failure point, not a character flaw.',
         ],
       },
       { type: 'h', text: 'In the room' },
       {
         type: 'list',
         items: [
-          'Open with your ask in the first 30 seconds — don\'t save it for the end.',
+          'Open with your ask in the first 30 seconds - don\'t save it for the end.',
           'Stick to your three struggles. Depth beats breadth in eight minutes.',
           'If asked something you don\'t know, "I\'m not sure, but here\'s what I do know" is a fine answer.',
         ],
@@ -268,7 +268,7 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           '"Where are you referring me, and roughly how long is the wait?"',
-          '"Am I eligible for Right to Choose?" (England only — it can cut the wait dramatically.)',
+          '"Am I eligible for Right to Choose?" (England only - it can cut the wait dramatically.)',
           '"How will I hear about the referral, and who do I chase if I hear nothing?"',
         ],
       },
@@ -290,13 +290,13 @@ export const GUIDES: Record<string, Guide> = {
         items: [
           'The struggle, in one plain sentence.',
           'A recent, concrete example (last few weeks if possible).',
-          'What it costs you — time, money, jobs, relationships, health.',
+          'What it costs you - time, money, jobs, relationships, health.',
         ],
       },
       { type: 'h', text: 'A worked example' },
       {
         type: 'script',
-        label: 'Struggle #1 — admin paralysis',
+        label: 'Struggle #1 - admin paralysis',
         text: '"I can\'t make myself deal with paperwork even when it\'s urgent. Last month I ignored a bill I could easily afford until it went to a debt collector. It\'s happened at least four times in two years."',
       },
       {
@@ -315,12 +315,12 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'script',
         label: 'Opening the appointment',
-        text: '"Thanks for seeing me. I want to talk about being assessed for ADHD. I\'ve written down the main things so I don\'t lose track — is it OK if I go through them?"',
+        text: '"Thanks for seeing me. I want to talk about being assessed for ADHD. I\'ve written down the main things so I don\'t lose track - is it OK if I go through them?"',
       },
       {
         type: 'script',
         label: 'Describing the history',
-        text: '"This isn\'t new — my school reports said things like \'easily distracted\' and \'not fulfilling potential\'. I\'ve built coping strategies, but they\'re expensive to maintain and they keep collapsing."',
+        text: '"This isn\'t new - my school reports said things like \'easily distracted\' and \'not fulfilling potential\'. I\'ve built coping strategies, but they\'re expensive to maintain and they keep collapsing."',
       },
       {
         type: 'script',
@@ -330,20 +330,20 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'script',
         label: 'If offered a different explanation first',
-        text: '"I hear that, and I\'m open to it — but the pattern goes back to childhood, well before any of that. I\'d like ADHD properly ruled in or out by a specialist."',
+        text: '"I hear that, and I\'m open to it - but the pattern goes back to childhood, well before any of that. I\'d like ADHD properly ruled in or out by a specialist."',
       },
     ],
   },
 
   // =========================================================================
-  // D — I've been referred and I'm waiting
+  // D - I've been referred and I'm waiting
   // =========================================================================
   'while-you-wait': {
     title: 'While-you-wait guidance',
     blocks: [
       {
         type: 'p',
-        text: 'The wait is genuinely hard: months or years of limbo, run by the exact executive functions ADHD makes unreliable. Two jobs matter now — protect the referral, and protect yourself.',
+        text: 'The wait is genuinely hard: months or years of limbo, run by the exact executive functions ADHD makes unreliable. Two jobs matter now - protect the referral, and protect yourself.',
       },
       { type: 'h', text: 'Protect the referral' },
       {
@@ -359,9 +359,9 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'list',
         items: [
-          'Keep collecting symptom examples — it\'s the best assessment prep there is, and the wait gives you time to do it well.',
+          'Keep collecting symptom examples - it\'s the best assessment prep there is, and the wait gives you time to do it well.',
           'Lower the bar: a "minimum viable week" (sleep, food, one priority per day) beats an elaborate system you\'ll abandon.',
-          'If your mental health dips while waiting, that\'s a GP matter now — don\'t sit on it until the assessment.',
+          'If your mental health dips while waiting, that\'s a GP matter now - don\'t sit on it until the assessment.',
         ],
       },
     ],
@@ -371,7 +371,7 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'A referral only moves if someone is watching it — and the system quietly assumes that someone is you. The fix is one boring habit: everything in one place, dated.',
+        text: 'A referral only moves if someone is watching it - and the system quietly assumes that someone is you. The fix is one boring habit: everything in one place, dated.',
       },
       { type: 'h', text: 'Record, every time you interact with anyone' },
       {
@@ -380,7 +380,7 @@ export const GUIDES: Record<string, Guide> = {
           'Date, who you spoke to, and which organisation.',
           'What they said (one line is fine).',
           'What happens next, and who owes it.',
-          'Reference numbers — ask for one if none is offered.',
+          'Reference numbers - ask for one if none is offered.',
         ],
       },
       { type: 'h', text: 'The chase-up script' },
@@ -391,7 +391,7 @@ export const GUIDES: Record<string, Guide> = {
       },
       {
         type: 'p',
-        text: 'Set the next chase-up reminder the moment you finish each call — not later. "Later" is where referrals go to die.',
+        text: 'Set the next chase-up reminder the moment you finish each call - not later. "Later" is where referrals go to die.',
       },
     ],
   },
@@ -400,7 +400,7 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Overwhelm is the point where everything feels equally urgent, so nothing gets done, so more piles up. The exit is never "try harder" — it\'s "shrink the next step until it\'s stupid-small".',
+        text: 'Overwhelm is the point where everything feels equally urgent, so nothing gets done, so more piles up. The exit is never "try harder" - it\'s "shrink the next step until it\'s stupid-small".',
       },
       { type: 'h', text: 'A 10-minute reset' },
       {
@@ -419,13 +419,13 @@ export const GUIDES: Record<string, Guide> = {
       },
       {
         type: 'note',
-        text: 'If overwhelm tips into crisis — you can\'t function, or you\'re having thoughts of harming yourself — that\'s beyond admin advice. Contact your GP, NHS 111, or Samaritans on 116 123 (24/7). In an emergency call 999.',
+        text: 'If overwhelm tips into crisis - you can\'t function, or you\'re having thoughts of harming yourself - that\'s beyond admin advice. Contact your GP, NHS 111, or Samaritans on 116 123 (24/7). In an emergency call 999.',
       },
     ],
   },
 
   // =========================================================================
-  // E — I'm comparing providers
+  // E - I'm comparing providers
   // =========================================================================
   'provider-questions': {
     title: 'Provider questions',
@@ -437,11 +437,11 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'list',
         items: [
-          'What\'s your current wait for assessment — and separately, for starting treatment after diagnosis?',
+          'What\'s your current wait for assessment - and separately, for starting treatment after diagnosis?',
           'Who does the assessing, and what format is it (video/in-person, how long)?',
           'If I\'m diagnosed, do you offer titration, and what\'s the wait for that?',
           'Do you support shared care with NHS GPs, and how often do surgeries actually accept yours?',
-          'What happens — and what does it cost — if my GP refuses shared care?',
+          'What happens - and what does it cost - if my GP refuses shared care?',
           'What are your annual review requirements and costs once I\'m stable on medication?',
           'What ongoing support exists between appointments if something goes wrong?',
         ],
@@ -457,14 +457,14 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'The assessment fee is the visible cost. The real cost is the whole journey — assessment, titration, prescriptions, and reviews, for as long as treatment continues.',
+        text: 'The assessment fee is the visible cost. The real cost is the whole journey - assessment, titration, prescriptions, and reviews, for as long as treatment continues.',
       },
       { type: 'h', text: 'Map all four buckets before choosing' },
       {
         type: 'list',
         items: [
           'Assessment: typically several hundred pounds to £1,200+ privately. £0 on NHS routes, including Right to Choose.',
-          'Titration: the dose-finding phase, often billed per appointment privately — ask how many appointments are typical.',
+          'Titration: the dose-finding phase, often billed per appointment privately - ask how many appointments are typical.',
           'Prescriptions: private prescriptions can run £50–£150+ per month; NHS prescriptions are the standard charge (free in Scotland and Wales).',
           'Reviews: many providers require a paid annual review to keep prescribing.',
         ],
@@ -472,7 +472,7 @@ export const GUIDES: Record<string, Guide> = {
       { type: 'h', text: 'The pivot point: shared care' },
       {
         type: 'p',
-        text: 'If your GP accepts a shared-care agreement after titration, prescribing moves to the NHS and monthly costs collapse. If they refuse — which they can — you pay private prices indefinitely. Ask your own GP surgery about their shared-care policy before you spend anything.',
+        text: 'If your GP accepts a shared-care agreement after titration, prescribing moves to the NHS and monthly costs collapse. If they refuse - which they can - you pay private prices indefinitely. Ask your own GP surgery about their shared-care policy before you spend anything.',
       },
     ],
   },
@@ -487,11 +487,11 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           'Registration: clinicians on the GMC register (or NMC for prescribing nurses); the service registered with CQC (England).',
-          'Assessment quality: a proper diagnostic interview against DSM-5/ICD-11 criteria — not just a questionnaire score.',
+          'Assessment quality: a proper diagnostic interview against DSM-5/ICD-11 criteria - not just a questionnaire score.',
           'The full pathway in writing: assessment → titration → shared care handover, with waits and costs for each stage.',
-          'Shared-care track record with GPs in your area — ask them directly, and ask your surgery the same question.',
+          'Shared-care track record with GPs in your area - ask them directly, and ask your surgery the same question.',
           'Right to Choose status if you\'re in England: an NHS contract means the whole thing can be free.',
-          'Reviews from real patients about the after-diagnosis experience — support tends to be strong up to diagnosis and patchier after.',
+          'Reviews from real patients about the after-diagnosis experience - support tends to be strong up to diagnosis and patchier after.',
         ],
       },
       {
@@ -502,23 +502,23 @@ export const GUIDES: Record<string, Guide> = {
   },
 
   // =========================================================================
-  // F — I'm starting medication / titration
+  // F - I'm starting medication / titration
   // =========================================================================
   'what-to-track': {
     title: 'What to track',
     blocks: [
       {
         type: 'p',
-        text: 'Titration is a structured experiment to find your dose. The clinician can only work with the data you bring — and ADHD memory will not reconstruct three weeks accurately after the fact. Track as you go, one minute a day.',
+        text: 'Titration is a structured experiment to find your dose. The clinician can only work with the data you bring - and ADHD memory will not reconstruct three weeks accurately after the fact. Track as you go, one minute a day.',
       },
       { type: 'h', text: 'Daily, quick ratings (1–5)' },
       {
         type: 'list',
         items: [
-          'Focus — could you direct your attention where you wanted it?',
+          'Focus - could you direct your attention where you wanted it?',
           'Mood and energy across the day, including the evening wear-off.',
-          'Appetite — a common effect worth catching early.',
-          'Sleep — how long it took to fall asleep, how you woke.',
+          'Appetite - a common effect worth catching early.',
+          'Sleep - how long it took to fall asleep, how you woke.',
           'Side effects: headaches, heart racing, jaw tension, anything new.',
         ],
       },
@@ -528,12 +528,12 @@ export const GUIDES: Record<string, Guide> = {
         items: [
           '"What worked better this week than before?"',
           '"What got worse or appeared that wasn\'t there?"',
-          'Dose and time taken, plus caffeine changes — reviewers always ask.',
+          'Dose and time taken, plus caffeine changes - reviewers always ask.',
         ],
       },
       {
         type: 'note',
-        text: 'Tracking never replaces medical guidance. If you experience concerning side effects — chest pain, severe mood changes, thoughts of self-harm — contact your prescriber or NHS 111 promptly; call 999 in an emergency.',
+        text: 'Tracking never replaces medical guidance. If you experience concerning side effects - chest pain, severe mood changes, thoughts of self-harm - contact your prescriber or NHS 111 promptly; call 999 in an emergency.',
       },
     ],
   },
@@ -542,13 +542,13 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Titration appointments are short and the questions evaporate under pressure — so bring them written down. The essentials:',
+        text: 'Titration appointments are short and the questions evaporate under pressure - so bring them written down. The essentials:',
       },
       { type: 'h', text: 'At the start' },
       {
         type: 'list',
         items: [
-          'What should this medication feel like when it\'s working — and how soon?',
+          'What should this medication feel like when it\'s working - and how soon?',
           'Which side effects are normal and passing, and which mean "contact you now"?',
           'How do increases work, and what exactly should I track between now and then?',
           'What about caffeine, alcohol, and my other medications?',
@@ -558,7 +558,7 @@ export const GUIDES: Record<string, Guide> = {
       {
         type: 'list',
         items: [
-          '"It helps for X hours then drops off a cliff — is that timing, dose, or formulation?"',
+          '"It helps for X hours then drops off a cliff - is that timing, dose, or formulation?"',
           '"Which of these effects should decide whether we go up, down, or switch?"',
         ],
       },
@@ -592,7 +592,7 @@ export const GUIDES: Record<string, Guide> = {
       { type: 'h', text: 'The catch' },
       {
         type: 'p',
-        text: 'GP surgeries can decline shared care — and some decline it for all private providers as policy. Acceptance rates are generally better for Right to Choose providers, since the care is already NHS-commissioned, but nothing is guaranteed. That\'s why "will my GP accept shared care from this provider?" belongs at the very start of your provider research, not the end.',
+        text: 'GP surgeries can decline shared care - and some decline it for all private providers as policy. Acceptance rates are generally better for Right to Choose providers, since the care is already NHS-commissioned, but nothing is guaranteed. That\'s why "will my GP accept shared care from this provider?" belongs at the very start of your provider research, not the end.',
       },
       {
         type: 'p',
@@ -605,21 +605,21 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Everything on this site — every guide, script, tracker, and pack — exists to help you organise information and prepare for appointments. None of it is medical advice, and none of it can tell you whether you have ADHD or what treatment is right for you.',
+        text: 'Everything on this site - every guide, script, tracker, and pack - exists to help you organise information and prepare for appointments. None of it is medical advice, and none of it can tell you whether you have ADHD or what treatment is right for you.',
       },
       {
         type: 'list',
         items: [
           'ADHD can only be diagnosed by an appropriately qualified clinician.',
           'Never start, stop, or change a medication dose except as directed by your prescriber.',
-          'Tracking tools inform conversations with professionals — they never replace them.',
+          'Tracking tools inform conversations with professionals - they never replace them.',
           'If you\'re worried about your health, medication, or side effects, contact your prescriber, GP, or NHS 111.',
           'In a mental health crisis: NHS 111, Samaritans 116 123 (24/7), or 999 in an emergency.',
         ],
       },
       {
         type: 'p',
-        text: 'Being organised makes every professional conversation better. That\'s the job this site does — the medical decisions stay with the people qualified to make them, with you in the room.',
+        text: 'Being organised makes every professional conversation better. That\'s the job this site does - the medical decisions stay with the people qualified to make them, with you in the room.',
       },
     ],
   },
@@ -632,18 +632,18 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Assessments run on evidence, and evidence beats memory — especially an ADHD memory under pressure. You don\'t need a dossier; you need a page of specific, dated examples sorted into a few categories.',
+        text: 'Assessments run on evidence, and evidence beats memory - especially an ADHD memory under pressure. You don\'t need a dossier; you need a page of specific, dated examples sorted into a few categories.',
       },
       { type: 'h', text: 'Start with six categories' },
       {
         type: 'list',
         items: [
-          'Focus & attention — drifting mid-task, rereading, unfinished work.',
-          'Time — lateness, lost hours, deadline cliff-edges.',
-          'Organisation — piles, chaos, abandoned systems.',
-          'Memory — forgotten commitments, lost items, blank moments.',
-          'Impulsivity — spending, blurting, snap decisions.',
-          'Emotions & energy — quick frustration, burnout cycles, restlessness.',
+          'Focus & attention - drifting mid-task, rereading, unfinished work.',
+          'Time - lateness, lost hours, deadline cliff-edges.',
+          'Organisation - piles, chaos, abandoned systems.',
+          'Memory - forgotten commitments, lost items, blank moments.',
+          'Impulsivity - spending, blurting, snap decisions.',
+          'Emotions & energy - quick frustration, burnout cycles, restlessness.',
         ],
       },
       { type: 'h', text: 'For each category, capture' },
@@ -651,13 +651,13 @@ export const GUIDES: Record<string, Guide> = {
         type: 'list',
         items: [
           'One or two recent examples, as specific as you can ("last Tuesday I…").',
-          'One older example — ideally reaching back to school or childhood.',
+          'One older example - ideally reaching back to school or childhood.',
           'The cost: what it broke, lost, or nearly lost you.',
         ],
       },
       {
         type: 'p',
-        text: 'Add to it whenever something happens — a two-line note in your phone is perfect. A month of casual collecting usually produces stronger evidence than a weekend of trying to remember everything at once.',
+        text: 'Add to it whenever something happens - a two-line note in your phone is perfect. A month of casual collecting usually produces stronger evidence than a weekend of trying to remember everything at once.',
       },
     ],
   },
@@ -666,13 +666,13 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'Three routes to an adult ADHD assessment in the UK — same destination, different waits and costs:',
+        text: 'Three routes to an adult ADHD assessment in the UK - same destination, different waits and costs:',
       },
       {
         type: 'list',
         items: [
-          'NHS standard: free, GP referral to your local service. Longest waits — often years.',
-          'Right to Choose (England): free, NHS-funded, but you pick the provider — often a wait of weeks to months instead. Availability varies by area; check the current position.',
+          'NHS standard: free, GP referral to your local service. Longest waits - often years.',
+          'Right to Choose (England): free, NHS-funded, but you pick the provider - often a wait of weeks to months instead. Availability varies by area; check the current position.',
           'Private: fastest, but you pay for assessment and possibly for ongoing prescribing if shared care is refused.',
         ],
       },
@@ -687,7 +687,7 @@ export const GUIDES: Record<string, Guide> = {
     blocks: [
       {
         type: 'p',
-        text: 'If you only do one thing this week, do this: book a GP appointment. You can prepare while you wait for the date — the booking is the step that makes it real.',
+        text: 'If you only do one thing this week, do this: book a GP appointment. You can prepare while you wait for the date - the booking is the step that makes it real.',
       },
       { type: 'h', text: 'Then, in order' },
       {
@@ -701,7 +701,7 @@ export const GUIDES: Record<string, Guide> = {
       },
       {
         type: 'p',
-        text: 'That\'s the whole job. Everything else on this site is optional depth — this list is the critical path.',
+        text: 'That\'s the whole job. Everything else on this site is optional depth - this list is the critical path.',
       },
     ],
   },

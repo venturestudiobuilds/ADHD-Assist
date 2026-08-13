@@ -4,13 +4,13 @@ import ProductPageShell from '@/components/ProductPageShell';
 import FreePackForm from '@/components/FreePackForm';
 
 export const metadata: Metadata = {
-  title: 'Free ADHD Appointment Panic Pack — ADHD Assist',
+  title: 'Free ADHD Appointment Panic Pack - ADHD Assist',
   description:
     'A calm little starter kit for preparing for your first GP conversation. 6 sections. Free. No catch.',
 };
 
 const SECTIONS = [
-  { icon: '🗺️', title: 'The Routes: A Simple Explainer', desc: 'NHS, Right to Choose (England), and private — a plain-English overview of each.' },
+  { icon: '🗺️', title: 'The Routes: A Simple Explainer', desc: 'NHS, Right to Choose (England), and private - a plain-English overview of each.' },
   { icon: '📋', title: 'GP Appointment Prep Sheet', desc: "A fill-in worksheet so your brain doesn't go blank in the appointment." },
   { icon: '📞', title: 'Brain-Freeze Phone Script', desc: 'Word-for-word scripts for booking the appointment and handling every possible response.' },
   { icon: '🗒️', title: 'Tiny Symptom Evidence Starter', desc: 'Six categories, minimal tables. Just enough to start the conversation.' },
@@ -99,10 +99,10 @@ export default function FreePack() {
             Want the full system?
           </p>
           <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.75, margin: '0 0 20px' }}>
-            The Starter Pack has 7 full sections — 2× the phone scripts, 8-category symptom builder, childhood worksheet, and 9 AI prompts.
+            The Starter Pack has 7 full sections - 2× the phone scripts, 8-category symptom builder, childhood worksheet, and 9 AI prompts.
           </p>
           <Link className="cta-button" style={{ fontSize: 16, padding: '14px 28px', textDecoration: 'none', display: 'inline-block' }} href="/starter-pack">
-            See the Starter Pack — £9 →
+            See the Starter Pack - £9 →
           </Link>
         </div>
       </div>

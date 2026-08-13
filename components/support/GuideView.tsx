@@ -1,6 +1,6 @@
 'use client';
 
-// Expanded free-guidance view — fills the "Start where you are" panel when a
+// Expanded free-guidance view - fills the "Start where you are" panel when a
 // "Read on site" item is clicked. Renders the guide's content blocks with a
 // back control to return to the situation overview.
 

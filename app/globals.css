@@ -1,6 +1,6 @@
-/* ADHD Assist — global styles (ported from the design handoff) */
+/* ADHD Assist - global styles (ported from the design handoff) */
 
-/* Self-hosted fonts (no runtime requests to Google — see /public/fonts) */
+/* Self-hosted fonts (no runtime requests to Google - see /public/fonts) */
 @font-face {
   font-family: 'Archivo Black';
   font-style: normal;
@@ -39,15 +39,15 @@ body {
   /* Background / surfaces */
   --bg: #CFEFED;          /* pale aqua main bg */
   --bg-deep: #B8E5E3;     /* deeper surface */
-  --stage: #F5F1E8;       /* card/panel — warm cream */
+  --stage: #F5F1E8;       /* card/panel - warm cream */
   --stage-2: #79D9DF;     /* secondary accent surface */
-  --floor: #F5F1E8;       /* maze base — warm cream */
-  --floor-2: #ECE6D8;     /* maze checker alt — slightly darker cream */
+  --floor: #F5F1E8;       /* maze base - warm cream */
+  --floor-2: #ECE6D8;     /* maze checker alt - slightly darker cream */
 
   /* Brand accents */
   --teal: #22C7CF;        /* main teal */
   --teal-soft: #79D9DF;   /* pastel cyan */
-  --teal-deep: #1F5F6B;   /* petrol — also used for text */
+  --teal-deep: #1F5F6B;   /* petrol - also used for text */
   --orange: #FFA94D;      /* small warm accent only */
 
   /* Coral system (maze walls + primary CTA) */
@@ -329,7 +329,7 @@ body {
 }
 
 /* Gentle, intentional CTA emphasis once the user has explored the maze.
-   A soft breathing glow + tiny lift — a nudge, not an alarm. */
+   A soft breathing glow + tiny lift - a nudge, not an alarm. */
 .cta-button-nudge {
   animation: ctaNudge 2.8s ease-in-out infinite;
 }
@@ -364,7 +364,7 @@ body {
   .cta-reassure { animation: none; }
 }
 
-/* About — friendly note-from-the-maker dropdown in the top nav */
+/* About - friendly note-from-the-maker dropdown in the top nav */
 .about-nav { position: relative; display: inline-flex; }
 .about-trigger {
   background: none;
@@ -523,7 +523,7 @@ body {
   font-size: 12px;
 }
 
-/* Thought bubbles — placed around the hero */
+/* Thought bubbles - placed around the hero */
 .thought-bubble {
   transform: rotate(var(--rot, 0deg));
   animation: thoughtPop 0.55s var(--delay, 0s) backwards cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -596,7 +596,7 @@ body {
   .thought-bubble.tb-side { display: none; }
 }
 
-/* Scroll-triggered supportive nudges — one calm bubble at a time */
+/* Scroll-triggered supportive nudges - one calm bubble at a time */
 .scroll-nudge-bubble-wrap {
   position: fixed;
   right: 26px;
@@ -672,14 +672,14 @@ body {
 }
 
 /* ============================================================
-   Support page v2 — scroll narrative
+   Support page v2 - scroll narrative
    ============================================================ */
 
 .support-page {
   --worry-progress: 0;
 }
 
-/* WORRIES — scattered thoughts that scatter further & fade on scroll */
+/* WORRIES - scattered thoughts that scatter further & fade on scroll */
 .worry-layer {
   position: absolute;
   inset: 0;
@@ -755,7 +755,7 @@ body {
   50% { transform: translateY(4px); }
 }
 
-/* PROGRESS PATH — sticky on the right */
+/* PROGRESS PATH - sticky on the right */
 .progress-path {
   position: fixed;
   top: 50%;
@@ -860,7 +860,7 @@ body {
   gap: 22px;
 }
 
-/* CARDS — each card starts hidden, animates in on .in-view */
+/* CARDS - each card starts hidden, animates in on .in-view */
 .phase-card {
   background: white;
   border: 3px solid var(--ink);
@@ -889,7 +889,7 @@ body {
   box-shadow: 0 14px 0 var(--ink), 0 20px 30px rgba(0,0,0,0.22);
 }
 
-/* Phase 2 — calmer fade-in, less rotation */
+/* Phase 2 - calmer fade-in, less rotation */
 .phase-2 .phase-card {
   transform: translateY(40px) scale(0.97);
   transition:
@@ -900,7 +900,7 @@ body {
 }
 .phase-2.in-view .phase-card { transform: translateY(0) scale(1); }
 
-/* Phase 3 — snappy, structured, files-into-drawer feel */
+/* Phase 3 - snappy, structured, files-into-drawer feel */
 .phase-3 .phase-card {
   transform: translateX(-30px) scale(0.96);
   transition:
@@ -1098,7 +1098,7 @@ button:focus-visible {
 }
 
 /* ============================================================
-   Support page v3 — Free guidance hub
+   Support page v3 - Free guidance hub
    ============================================================ */
 
 .hero-eyebrow {
@@ -1752,7 +1752,7 @@ button:focus-visible {
 }
 
 /* ============================================================
-   Support page v4 — Start where you are interactive
+   Support page v4 - Start where you are interactive
    ============================================================ */
 
 .swyu {
@@ -1849,7 +1849,7 @@ button:focus-visible {
 .situation-chev { opacity: 0.6; }
 .situation-card.active .situation-chev { opacity: 1; }
 
-/* Right panel — sticky reveal */
+/* Right panel - sticky reveal */
 .swyu-panel {
   position: sticky;
   top: 80px;
@@ -1985,7 +1985,7 @@ button:focus-visible {
 }
 
 /* ============================================================
-   RESPONSIVE — desktop (1200+), tablet (768–1024), mobile (≤767)
+   RESPONSIVE - desktop (1200+), tablet (768–1024), mobile (≤767)
    Adapts the existing layouts; no visual redesign.
    ============================================================ */
 
@@ -2101,7 +2101,7 @@ button:focus-visible {
 .download-link:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--ink); }
 
 /* ============================================================
-   Guide view — free guidance expanded inside the swyu panel
+   Guide view - free guidance expanded inside the swyu panel
    ============================================================ */
 
 .guide-view-back {
@@ -2184,7 +2184,7 @@ button:focus-visible {
   margin: 4px 0 14px;
 }
 
-/* Support map — expanded guide card inside a journey stage */
+/* Support map - expanded guide card inside a journey stage */
 .journey-guide-card {
   margin-top: 20px;
   background: white;

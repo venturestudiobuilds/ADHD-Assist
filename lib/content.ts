@@ -1,4 +1,4 @@
-// Editable content layer — all prose and structured data for the site lives
+// Editable content layer - all prose and structured data for the site lives
 // here so copy can change without touching layout components.
 
 export const LANDING = {

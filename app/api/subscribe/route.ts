@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // POST /api/subscribe { email, product }
 // Email-capture endpoint for the free pack. Currently just validates and
-// logs — wire this to an email provider (Resend / Mailchimp / ConvertKit)
+// logs - wire this to an email provider (Resend / Mailchimp / ConvertKit)
 // to actually deliver the pack and build the list.
 export async function POST(req: NextRequest) {
   let body: { email?: unknown; product?: unknown };

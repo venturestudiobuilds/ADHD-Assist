@@ -3,7 +3,7 @@ import ProductPageShell from '@/components/ProductPageShell';
 import BuyButton from '@/components/BuyButton';
 
 export const metadata: Metadata = {
-  title: 'Full Pack + Admin System Bundle (£35) — ADHD Assist',
+  title: 'Full Pack + Admin System Bundle (£35) - ADHD Assist',
   description: 'The complete PDF system and the interactive tracker, together.',
 };
 
@@ -44,7 +44,7 @@ export default function BundlePage() {
           <p style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', color: 'var(--ink)', opacity: 0.8, fontWeight: 600, maxWidth: 500, margin: '0 auto 32px' }}>
             The complete PDF system and the interactive tracker, together.
           </p>
-          <BuyButton slug="bundle">Get the bundle — £35 →</BuyButton>
+          <BuyButton slug="bundle">Get the bundle - £35 →</BuyButton>
           <p style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.5, marginTop: 12 }}>
             Instant download · Full Pack PDF + Admin System (browser app, Sheets file, Notion guide)
           </p>
@@ -109,7 +109,7 @@ export default function BundlePage() {
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <BuyButton slug="bundle">Get the bundle — £35 →</BuyButton>
+          <BuyButton slug="bundle">Get the bundle - £35 →</BuyButton>
         </div>
       </div>
     </ProductPageShell>

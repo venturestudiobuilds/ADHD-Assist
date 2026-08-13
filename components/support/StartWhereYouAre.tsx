@@ -1,6 +1,6 @@
 'use client';
 
-// "Start where you are" — interactive situation picker with reveal panel.
+// "Start where you are" - interactive situation picker with reveal panel.
 // Clicking a "Read on site" item expands the free guidance for that item to
 // fill the panel; a back button returns to the situation overview.
 

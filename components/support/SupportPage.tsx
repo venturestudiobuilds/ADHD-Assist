@@ -1,6 +1,6 @@
 'use client';
 
-// Support hub — Hero → Start where you are → Support map at a glance →
+// Support hub - Hero → Start where you are → Support map at a glance →
 //               Downloads → Final CTA → Disclaimer.
 
 import React from 'react';
@@ -359,7 +359,7 @@ function JourneyStage({ stage }: { stage: { n: number; title: string; read: stri
             <GuideView
               slug={openGuide}
               onBack={() => setOpenGuide(null)}
-              backLabel={`Close — back to “${stage.title}”`}
+              backLabel={`Close - back to “${stage.title}”`}
             />
           </div>
         )}
