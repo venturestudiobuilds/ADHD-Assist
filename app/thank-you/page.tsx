@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import SiteFooter from '@/components/SiteFooter';
 import { getProduct } from '@/lib/products';
 
 export const metadata: Metadata = {
@@ -65,6 +66,8 @@ export default async function ThankYouPage({
           </>
         )}
       </div>
+
+      <SiteFooter />
     </div>
   );
 }

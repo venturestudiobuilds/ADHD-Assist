@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import SiteFooter from '@/components/SiteFooter';
 import { getStripe } from '@/lib/stripe';
 import { getProduct } from '@/lib/products';
 
@@ -80,19 +81,7 @@ export default async function SuccessPage({
         )}
       </div>
 
-      <div
-        style={{
-          textAlign: 'center',
-          marginTop: 40,
-          opacity: 0.55,
-          fontSize: 12,
-          fontWeight: 600,
-          color: 'var(--ink)',
-          letterSpacing: '0.08em',
-        }}
-      >
-        MADE WITH PATIENCE · FOR PEOPLE WHO LOST THEIRS
-      </div>
+      <SiteFooter />
     </div>
   );
 }

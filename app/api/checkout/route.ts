@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getStripe, siteUrl } from '@/lib/stripe';
 import { getProduct, CURRENCY } from '@/lib/products';
+import { CHECKOUT_CONSENT_TEXT } from '@/lib/legal';
 
 // POST /api/checkout { slug } → { url }
 // Creates a Stripe Checkout Session for a paid pack using inline price_data,
@@ -45,6 +46,11 @@ export async function POST(req: NextRequest) {
       cancel_url: `${origin}/support#downloads`,
       // Collect email so the webhook can email the download link later.
       customer_creation: 'if_required',
+      // Express consent to immediate digital delivery + 14-day waiver
+      // (Consumer Contracts Regulations 2013). Shown next to the pay button.
+      custom_text: {
+        submit: { message: CHECKOUT_CONSENT_TEXT },
+      },
     });
 
     return NextResponse.json({ url: session.url });

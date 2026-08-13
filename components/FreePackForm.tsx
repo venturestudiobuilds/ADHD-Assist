@@ -65,7 +65,8 @@ export default function FreePackForm() {
       </button>
       {error && <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--coral-dark)', margin: 0 }}>{error}</p>}
       <p style={{ fontSize: 12, color: 'var(--ink)', opacity: 0.5, margin: 0 }}>
-        No spam. Unsubscribe any time. Just the pack.
+        No spam. Unsubscribe any time. Just the pack. See our{' '}
+        <a href="/privacy" style={{ color: 'inherit', fontWeight: 700 }}>privacy policy</a>.
       </p>
     </form>
   );

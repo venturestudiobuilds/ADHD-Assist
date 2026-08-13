@@ -10,6 +10,7 @@ import ScrollNudges from '@/components/support/ScrollNudges';
 import ProductCard from '@/components/support/ProductCard';
 import GuideView from '@/components/support/GuideView';
 import BackgroundParticles from '@/components/BackgroundParticles';
+import SiteFooter from '@/components/SiteFooter';
 import { COPY, JOURNEY, WORRIES } from '@/lib/content';
 import { PRODUCTS } from '@/lib/products';
 import { getGuide } from '@/lib/guides';
@@ -282,18 +283,8 @@ export default function SupportPage() {
           </div>
         </div>
 
-        <div
-          style={{
-            textAlign: 'center',
-            marginTop: 48,
-            opacity: 0.55,
-            fontSize: 12,
-            fontWeight: 600,
-            color: 'var(--ink)',
-            letterSpacing: '0.08em',
-          }}
-        >
-          {COPY.footer}
+        <div style={{ marginTop: 24 }}>
+          <SiteFooter />
         </div>
       </div>
     </div>

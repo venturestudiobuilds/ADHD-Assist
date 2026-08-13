@@ -2,6 +2,7 @@
 // disclaimer and footer. Content pages render inside it.
 
 import Link from 'next/link';
+import SiteFooter from '@/components/SiteFooter';
 import { COPY } from '@/lib/content';
 
 export default function ProductPageShell({ children }: { children: React.ReactNode }) {
@@ -41,19 +42,7 @@ export default function ProductPageShell({ children }: { children: React.ReactNo
         </div>
       </div>
 
-      <div
-        style={{
-          textAlign: 'center',
-          marginTop: 40,
-          opacity: 0.55,
-          fontSize: 12,
-          fontWeight: 600,
-          color: 'var(--ink)',
-          letterSpacing: '0.08em',
-        }}
-      >
-        {COPY.footer}
-      </div>
+      <SiteFooter />
     </div>
   );
 }

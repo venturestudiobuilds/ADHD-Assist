@@ -9,6 +9,7 @@ import Maze from '@/components/Maze';
 import AboutNav from '@/components/AboutNav';
 import ThoughtBubbles from '@/components/ThoughtBubbles';
 import BackgroundParticles from '@/components/BackgroundParticles';
+import SiteFooter from '@/components/SiteFooter';
 import { LANDING } from '@/lib/content';
 
 export default function Hero() {
@@ -171,7 +172,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div style={{ height: 40 }} />
+        <div style={{ marginTop: 40 }}>
+          <SiteFooter />
+        </div>
       </div>
     </div>
   );
