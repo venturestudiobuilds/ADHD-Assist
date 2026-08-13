@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADHD Admin System</title>
+<style>
+  :root {
+    --bg: #CFEFED; --stage: #F5F1E8; --ink: #1F5F6B; --ink-soft: #2C7280;
+    --coral: #FF6B6B; --coral-dark: #E55050; --rule: #9DBEC5;
+    --green: #3FA97C; --amber: #E8A33D;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--ink); min-height: 100vh;
+  }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; padding: 14px 18px; flex-wrap: wrap;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 8px; background: white;
+    border: 2px solid var(--ink); border-radius: 999px; padding: 7px 14px;
+    font-weight: 700; font-size: 13px; box-shadow: 0 3px 0 var(--ink);
+  }
+  .brand-dot { width: 10px; height: 10px; background: var(--coral); border-radius: 50%; border: 2px solid var(--ink); }
+  .top-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn {
+    background: white; border: 2px solid var(--ink); border-radius: 999px;
+    padding: 7px 14px; font: inherit; font-size: 12.5px; font-weight: 700;
+    color: var(--ink); cursor: pointer; box-shadow: 0 3px 0 var(--ink);
+  }
+  .btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+  .btn.primary { background: var(--coral); color: white; }
+  .tabs {
+    display: flex; gap: 6px; padding: 0 18px 12px; flex-wrap: wrap;
+  }
+  .tab {
+    background: white; border: 2px solid var(--ink); border-radius: 999px;
+    padding: 8px 14px; font: inherit; font-size: 12.5px; font-weight: 700;
+    color: var(--ink); cursor: pointer; box-shadow: 0 3px 0 var(--ink);
+  }
+  .tab.active { background: var(--ink); color: white; }
+  .panel {
+    max-width: 1060px; margin: 0 auto 40px; background: white;
+    border: 3px solid var(--ink); border-radius: 18px; padding: 22px;
+    box-shadow: 0 8px 0 var(--ink);
+  }
+  @media (max-width: 720px) { .panel { margin: 0 10px 40px; padding: 14px; } }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 18px 0 8px; }
+  .sub { font-size: 13px; color: var(--ink-soft); margin: 0 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: var(--ink); color: white; text-align: left; padding: 7px 8px;
+    font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase;
+  }
+  td { border: 1px solid var(--rule); padding: 0; vertical-align: top; }
+  td[contenteditable] { padding: 7px 8px; min-width: 60px; outline: none; }
+  td[contenteditable]:focus { background: #FFF8E8; }
+  td.ro { padding: 7px 8px; background: var(--stage); font-weight: 600; }
+  select {
+    width: 100%; border: 0; padding: 7px 6px; font: inherit; font-size: 13px;
+    color: var(--ink); background: transparent; cursor: pointer;
+  }
+  select.st-done { background: #E3F4EC; color: var(--green); font-weight: 700; }
+  select.st-progress { background: #FBF1DC; color: var(--amber); font-weight: 700; }
+  .addrow { margin-top: 10px; }
+  .progress-wrap {
+    background: var(--stage); border: 2px solid var(--ink); border-radius: 999px;
+    height: 26px; overflow: hidden; margin: 10px 0 4px;
+  }
+  .progress-fill {
+    height: 100%; background: var(--coral); border-radius: 999px;
+    transition: width .4s ease; min-width: 8px;
+  }
+  .progress-label { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); }
+  .next-up {
+    background: var(--stage); border: 2px dashed var(--ink); border-radius: 12px;
+    padding: 12px 14px; font-size: 13.5px; font-weight: 600; margin-top: 14px;
+  }
+  .note {
+    background: var(--stage); border: 2px dashed var(--ink); border-radius: 12px;
+    padding: 12px 14px; font-size: 12.5px; margin-top: 16px; line-height: 1.5;
+  }
+  .howto p { font-size: 13.5px; line-height: 1.6; }
+  .howto b { color: var(--coral-dark); }
+  .saved {
+    position: fixed; bottom: 14px; right: 14px; background: var(--ink);
+    color: white; font-size: 12px; font-weight: 700; border-radius: 999px;
+    padding: 7px 14px; opacity: 0; transition: opacity .3s; pointer-events: none;
+  }
+  .saved.show { opacity: .92; }
+  .tablewrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand"><span class="brand-dot"></span> ADHD ADMIN SYSTEM</span>
+  <span class="top-actions">
+    <button class="btn" id="exportBtn">Export backup</button>
+    <button class="btn" id="importBtn">Import</button>
+    <input type="file" id="importFile" accept=".json" style="display:none">
+  </span>
+</div>
+<div class="tabs" id="tabs"></div>
+<div id="content"></div>
+<div class="saved" id="savedToast">Saved ✓</div>
+
+<script>
+'use strict';
+const LS_KEY = 'adhd-admin-system-v1';
+const STATUS = ['Not started', 'In progress', 'Done'];
+const APPT_TYPES = ['GP', 'Assessment', 'Titration', 'Review', 'Other'];
+
+const MILESTONES = ['GP appointment booked','GP appointment attended','Referral sent',
+  'Referral confirmed received','Questionnaires returned','Assessment date offered',
+  'Assessment attended','Report received','Treatment started','Shared care agreed'];
+
+const TASKS = [
+  ['Before the GP','Book GP appointment (double if possible)'],
+  ['Before the GP','Complete GP prep template (Parts A–H)'],
+  ['Before the GP','Fill in symptom evidence builder'],
+  ['Before the GP','Complete childhood & adult worksheet'],
+  ['Before the GP','Find old school reports (if they exist)'],
+  ['Before the GP','Practise opening statement once, out loud'],
+  ['Referral stage','Confirm referral sent (date + destination)'],
+  ['Referral stage','Get a copy of the referral letter'],
+  ['Referral stage','Check Right to Choose position for your area (England)'],
+  ['Referral stage','Set first chase-up reminder (6–8 weeks)'],
+  ['Referral stage','Start the referral log'],
+  ['Referral stage','Return screening questionnaires promptly'],
+  ['While waiting','Keep adding to the evidence sheets'],
+  ['While waiting','Chase referral on schedule; log every contact'],
+  ['While waiting','Set up the weekly survival planner'],
+  ['While waiting','Warn your childhood informant about the questionnaire'],
+  ['Assessment & after','Complete assessment day prep worksheet'],
+  ['Assessment & after','Attend assessment; run follow-up checklist'],
+  ['Assessment & after','Request and file the assessment report'],
+  ['Assessment & after','Work through the after-assessment questions'],
+  ['Treatment stage','Start medication & titration notes (if prescribed)'],
+  ['Treatment stage','Ask about shared care before titration ends'],
+  ['Treatment stage','Book and prep for each review appointment'],
+];
+
+const PROVIDER_CRITERIA = ['Assessment cost','Titration cost (per appt & typical total)',
+  'Prescription cost during titration','Annual review cost','Current wait: assessment',
+  'Current wait: treatment after diagnosis','Right to Choose available?','Format (video / in person)',
+  'Assessment length & structure','Who assesses (psychiatrist / nurse)','GMC / NMC registration checked?',
+  'CQC registered?','Diagnostic interview (DSM-5 / ICD-11)?','Informant questionnaire used?',
+  'Titration offered?','Shared care supported?','Shared care acceptance rate with GPs',
+  'What if GP refuses shared care?','Support between appointments','Cancellation / rebooking policy',
+  'Patient reviews (after diagnosis)','Gut feeling after contact'];
+
+const DOCS = [
+  ['Before GP','Symptom evidence sheets'],['Before GP','School reports / childhood records'],
+  ['Before GP','Current medication list'],['Before GP','Medical history notes'],
+  ['Referral stage','Copy of referral letter'],['Referral stage','Referral reference number'],
+  ['Referral stage','Screening questionnaires (returned)'],['Referral stage','Photo ID / NHS number'],
+  ['Assessment & after','Assessment report'],['Assessment & after','Diagnosis letter (if applicable)'],
+  ['Assessment & after','Shared care agreement'],['Assessment & after','Prescriptions / titration schedule'],
+];
+
+const MED_DAYS = (() => {
+  const rows = [];
+  for (let w = 1; w <= 4; w++)
+    for (const d of ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'])
+      rows.push(`W${w} ${d}`);
+  return rows;
+})();
+
+// ---------------- state ----------------
+function defaultState() {
+  return {
+    milestones: MILESTONES.map(m => ({ m, status: 'Not started', date: '', notes: '' })),
+    tasks: TASKS.map(([stage, task]) => ({ stage, task, status: 'Not started', due: '', notes: '' })),
+    referralDetails: { by: '', sent: '', to: '', ref: '', wait: '', route: '' },
+    referralLog: [blankLog()],
+    providers: { names: ['', '', ''], cells: PROVIDER_CRITERIA.map(() => ['', '', '']) },
+    docs: DOCS.map(([stage, doc]) => ({ stage, doc, priority: 'High', status: 'Not started', where: '' })),
+    appts: [blankAppt()],
+    medDetails: { med: '', time: '', started: '', prescriber: '', review: '' },
+    med: MED_DAYS.map(day => ({ day, focus: '', mood: '', energy: '', appetite: '', sleep: '', notes: '' })),
+  };
+}
+function blankLog() { return { date: '', who: '', said: '', next: '' }; }
+function blankAppt() { return { date: '', type: 'GP', who: '', agreed: '', next: '', felt: '' }; }
+
+let state = load();
+function load() {
+  try {
+    const raw = localStorage.getItem(LS_KEY);
+    if (raw) return Object.assign(defaultState(), JSON.parse(raw));
+  } catch (e) { /* corrupted backup — start fresh */ }
+  return defaultState();
+}
+let saveTimer, toastTimer;
+function save() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    localStorage.setItem(LS_KEY, JSON.stringify(state));
+    const t = document.getElementById('savedToast');
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 900);
+  }, 250);
+}
+
+// ---------------- rendering helpers ----------------
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function editableCell(obj, key, opts = {}) {
+  const td = document.createElement('td');
+  td.contentEditable = 'true';
+  td.textContent = obj[key] || '';
+  if (opts.placeholder && !obj[key]) td.dataset.ph = opts.placeholder;
+  td.addEventListener('input', () => { obj[key] = td.textContent; save(); });
+  return td;
+}
+function selectCell(obj, key, options, onchange) {
+  const td = document.createElement('td');
+  const sel = document.createElement('select');
+  for (const o of options) {
+    const op = document.createElement('option');
+    op.value = op.textContent = o;
+    sel.appendChild(op);
+  }
+  sel.value = obj[key] || options[0];
+  const paint = () => {
+    sel.className = sel.value === 'Done' ? 'st-done' : sel.value === 'In progress' ? 'st-progress' : '';
+  };
+  paint();
+  sel.addEventListener('change', () => { obj[key] = sel.value; paint(); save(); if (onchange) onchange(); });
+  td.appendChild(sel);
+  return td;
+}
+function table(headers, buildRows) {
+  const wrap = document.createElement('div');
+  wrap.className = 'tablewrap';
+  const t = document.createElement('table');
+  const tr = document.createElement('tr');
+  for (const h of headers) { const th = document.createElement('th'); th.textContent = h; tr.appendChild(th); }
+  t.appendChild(tr);
+  buildRows(t);
+  wrap.appendChild(t);
+  return wrap;
+}
+function addRowBtn(label, fn) {
+  const b = document.createElement('button');
+  b.className = 'btn addrow';
+  b.textContent = label;
+  b.addEventListener('click', () => { fn(); save(); render(); });
+  return b;
+}
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.innerHTML = text;
+  return e;
+}
+
+// ---------------- tabs ----------------
+const TABS = [
+  ['dashboard', '📊 Dashboard'], ['tasks', '✅ Admin Tracker'], ['referral', '📅 Referral Log'],
+  ['providers', '🏥 Provider Compare'], ['docs', '📁 Documents'], ['appts', '📝 Appointment Log'],
+  ['med', '💊 Medication'], ['help', '📖 How to Use'],
+];
+let activeTab = location.hash.replace('#', '') || 'dashboard';
+if (!TABS.some(([id]) => id === activeTab)) activeTab = 'dashboard';
+
+function render() {
+  const tabs = document.getElementById('tabs');
+  tabs.innerHTML = '';
+  for (const [id, label] of TABS) {
+    const b = el('button', 'tab' + (id === activeTab ? ' active' : ''), esc(label));
+    b.addEventListener('click', () => { activeTab = id; location.hash = id; render(); });
+    tabs.appendChild(b);
+  }
+  const c = document.getElementById('content');
+  c.innerHTML = '';
+  const panel = el('div', 'panel');
+  VIEWS[activeTab](panel);
+  c.appendChild(panel);
+}
+
+const VIEWS = {
+  dashboard(p) {
+    p.appendChild(el('h1', null, 'Dashboard'));
+    p.appendChild(el('p', 'sub', 'Milestones with a live progress bar. The other tabs hold the detail.'));
+    const done = state.milestones.filter(m => m.status === 'Done').length;
+    const pct = Math.round((done / state.milestones.length) * 100);
+    const wrap = el('div', 'progress-wrap');
+    const fill = el('div', 'progress-fill');
+    fill.style.width = pct + '%';
+    wrap.appendChild(fill);
+    p.appendChild(wrap);
+    p.appendChild(el('div', 'progress-label', `${done} of ${state.milestones.length} milestones done (${pct}%)`));
+    p.appendChild(table(['Milestone', 'Status', 'Date', 'Notes'], t => {
+      for (const m of state.milestones) {
+        const tr = document.createElement('tr');
+        const td = el('td', 'ro', esc(m.m)); tr.appendChild(td);
+        tr.appendChild(selectCell(m, 'status', STATUS, render));
+        tr.appendChild(editableCell(m, 'date'));
+        tr.appendChild(editableCell(m, 'notes'));
+        t.appendChild(tr);
+      }
+    }));
+    const next = state.milestones.find(m => m.status !== 'Done');
+    p.appendChild(el('div', 'next-up', next
+      ? `👉 <b>What to do next:</b> ${esc(next.m)} — open the matching tab and take the first small step.`
+      : '🎉 Every milestone is done. Look after yourself.'));
+  },
+
+  tasks(p) {
+    p.appendChild(el('h1', null, 'Admin Tracker'));
+    p.appendChild(el('p', 'sub', '23 pre-loaded tasks across all stages. Add your own at the bottom.'));
+    p.appendChild(table(['Stage', 'Task', 'Status', 'Due / done', 'Notes'], t => {
+      for (const task of state.tasks) {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(task.stage)));
+        tr.appendChild(editableCell(task, 'task'));
+        tr.appendChild(selectCell(task, 'status', STATUS));
+        tr.appendChild(editableCell(task, 'due'));
+        tr.appendChild(editableCell(task, 'notes'));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(addRowBtn('+ Add a task', () =>
+      state.tasks.push({ stage: 'Custom', task: '', status: 'Not started', due: '', notes: '' })));
+  },
+
+  referral(p) {
+    p.appendChild(el('h1', null, 'Referral Log'));
+    p.appendChild(el('p', 'sub', 'Referral details, plus a running log of every call, letter and email — dated.'));
+    p.appendChild(el('h2', null, 'Referral details'));
+    const d = state.referralDetails;
+    const fields = [['by', 'Referred by (GP / surgery)'], ['sent', 'Date sent'], ['to', 'Referred to (provider)'],
+      ['ref', 'Reference number'], ['wait', 'Estimated wait (as quoted)'], ['route', 'Route (NHS / RTC / private)']];
+    p.appendChild(table(['Field', 'Details'], t => {
+      for (const [k, label] of fields) {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(label)));
+        tr.appendChild(editableCell(d, k));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(el('h2', null, 'Contact log'));
+    p.appendChild(table(['Date', 'Who / organisation', 'What was said', 'Next step + who owes it'], t => {
+      for (const row of state.referralLog) {
+        const tr = document.createElement('tr');
+        tr.appendChild(editableCell(row, 'date'));
+        tr.appendChild(editableCell(row, 'who'));
+        tr.appendChild(editableCell(row, 'said'));
+        tr.appendChild(editableCell(row, 'next'));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(addRowBtn('+ Add contact', () => state.referralLog.push(blankLog())));
+    p.appendChild(el('div', 'note', '⏰ Chase every 6–8 weeks. Set the next reminder the moment you finish each call — “later” is where referrals go to die.'));
+  },
+
+  providers(p) {
+    p.appendChild(el('h1', null, 'Provider Compare'));
+    p.appendChild(el('p', 'sub', '22 criteria, three providers side by side. Name the providers in the header row.'));
+    p.appendChild(el('div', 'note', '⚠️ Right to Choose: if you’re in England, check whether each provider offers RTC before paying anything — the same assessment may be free.'));
+    const pr = state.providers;
+    p.appendChild(table(['Criteria', '', '', ''], t => {
+      const nameRow = document.createElement('tr');
+      nameRow.appendChild(el('td', 'ro', 'Provider name →'));
+      pr.names.forEach((_, i) => {
+        const td = document.createElement('td');
+        td.contentEditable = 'true';
+        td.style.fontWeight = '700';
+        td.textContent = pr.names[i];
+        td.addEventListener('input', () => { pr.names[i] = td.textContent; save(); });
+        nameRow.appendChild(td);
+      });
+      t.appendChild(nameRow);
+      PROVIDER_CRITERIA.forEach((crit, r) => {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(crit)));
+        for (let cIdx = 0; cIdx < 3; cIdx++) {
+          const td = document.createElement('td');
+          td.contentEditable = 'true';
+          td.textContent = pr.cells[r][cIdx];
+          td.addEventListener('input', () => { pr.cells[r][cIdx] = td.textContent; save(); });
+          tr.appendChild(td);
+        }
+        t.appendChild(tr);
+      });
+    }));
+  },
+
+  docs(p) {
+    p.appendChild(el('h1', null, 'Documents'));
+    p.appendChild(el('p', 'sub', 'Everything worth having in one folder, pre-listed across three stages.'));
+    p.appendChild(table(['Stage', 'Document', 'Priority', 'Status', 'Where it lives'], t => {
+      for (const d of state.docs) {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(d.stage)));
+        tr.appendChild(editableCell(d, 'doc'));
+        tr.appendChild(selectCell(d, 'priority', ['High', 'Medium', 'Low']));
+        tr.appendChild(selectCell(d, 'status', STATUS));
+        tr.appendChild(editableCell(d, 'where'));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(addRowBtn('+ Add a document', () =>
+      state.docs.push({ stage: 'Custom', doc: '', priority: 'Medium', status: 'Not started', where: '' })));
+  },
+
+  appts(p) {
+    p.appendChild(el('h1', null, 'Appointment Log'));
+    p.appendChild(el('p', 'sub', 'A row for every appointment — including “how it felt”, because that’s data too.'));
+    p.appendChild(table(['Date', 'Type', 'Who with', 'What was agreed', 'Next step', 'How it felt'], t => {
+      for (const a of state.appts) {
+        const tr = document.createElement('tr');
+        tr.appendChild(editableCell(a, 'date'));
+        tr.appendChild(selectCell(a, 'type', APPT_TYPES));
+        tr.appendChild(editableCell(a, 'who'));
+        tr.appendChild(editableCell(a, 'agreed'));
+        tr.appendChild(editableCell(a, 'next'));
+        tr.appendChild(editableCell(a, 'felt'));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(addRowBtn('+ Add appointment', () => state.appts.push(blankAppt())));
+  },
+
+  med(p) {
+    p.appendChild(el('h1', null, 'Medication'));
+    p.appendChild(el('p', 'sub', 'Details plus a 4-week daily log. Rate 1–5 (1 = rough, 5 = great). One minute a day.'));
+    p.appendChild(el('h2', null, 'Current details'));
+    const d = state.medDetails;
+    const fields = [['med', 'Medication & dose'], ['time', 'Time(s) taken'], ['started', 'Started on'],
+      ['prescriber', 'Prescriber & contact'], ['review', 'Next review date']];
+    p.appendChild(table(['Field', 'Details'], t => {
+      for (const [k, label] of fields) {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(label)));
+        tr.appendChild(editableCell(d, k));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(el('h2', null, 'Daily log'));
+    p.appendChild(table(['Day', 'Focus', 'Mood', 'Energy', 'Appetite', 'Sleep', 'Side effects / notes'], t => {
+      for (const row of state.med) {
+        const tr = document.createElement('tr');
+        tr.appendChild(el('td', 'ro', esc(row.day)));
+        for (const k of ['focus', 'mood', 'energy', 'appetite', 'sleep', 'notes'])
+          tr.appendChild(editableCell(row, k));
+        t.appendChild(tr);
+      }
+    }));
+    p.appendChild(el('div', 'note',
+      '⚕️ Never change a dose except as directed by your prescriber. Concerning side effects — chest pain, severe mood changes, thoughts of self-harm — mean contacting your prescriber or NHS 111 promptly; call 999 in an emergency.'));
+  },
+
+  help(p) {
+    p.appendChild(el('h1', null, 'How to Use'));
+    const h = el('div', 'howto', `
+      <p><b>Everything saves automatically</b> in this browser (you'll see “Saved ✓” bottom-right). No account, no internet needed.</p>
+      <p><b>Click any cell to edit it.</b> Status cells are dropdowns — green means done. “+ Add” buttons put new rows at the bottom of each table.</p>
+      <p><b>📊 Dashboard</b> — your milestones and the “what to do next” line. When stuck, do the first not-done milestone. That's always the answer.</p>
+      <p><b>✅ Admin Tracker</b> — the whole process as one task list, in order.</p>
+      <p><b>📅 Referral Log</b> — referral details + every contact, dated. Dates win arguments with waiting lists.</p>
+      <p><b>🏥 Provider Compare</b> — 22 criteria, three providers. Fill it in as you research.</p>
+      <p><b>📁 Documents / 📝 Appointment Log / 💊 Medication</b> — file, log, track. One minute at a time.</p>
+      <p><b>Backups:</b> your data lives in this browser on this device. Use <b>Export backup</b> (top right) to save a file, and <b>Import</b> to restore it or move to another device. Clearing browser data will erase the tracker — export first.</p>
+      <p style="color:var(--ink-soft)">Educational only — this system organises your process; it is not medical advice, a diagnostic tool, or a replacement for qualified healthcare. If you're worried about your health or safety: GP, NHS 111, or 999 in an emergency. Samaritans: 116 123.</p>
+    `);
+    p.appendChild(h);
+  },
+};
+
+// ---------------- export / import ----------------
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'adhd-admin-system-backup.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+document.getElementById('importBtn').addEventListener('click', () =>
+  document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!data || typeof data !== 'object' || !Array.isArray(data.milestones)) {
+        alert('That file doesn\'t look like an Admin System backup.');
+        return;
+      }
+      state = Object.assign(defaultState(), data);
+      save();
+      render();
+    } catch {
+      alert('Could not read that file — is it the exported backup JSON?');
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+render();
+</script>
+</body>
+</html>
