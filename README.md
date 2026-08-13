@@ -14,7 +14,7 @@ cp .env.example .env.local   # fill in your Stripe keys
 npm run dev
 ```
 
-The site runs without Stripe keys — everything works except paid checkout.
+The site runs without Stripe keys - everything works except paid checkout.
 
 ## Environment variables
 
@@ -26,11 +26,11 @@ The site runs without Stripe keys — everything works except paid checkout.
 
 ## Payments / packs
 
-- The product catalogue lives in [`lib/products.ts`](lib/products.ts) — titles, copy, **prices (GBP pence)** and pack file names. Prices are placeholders; edit them there.
+- The product catalogue lives in [`lib/products.ts`](lib/products.ts) - titles, copy, **prices (GBP pence)** and pack file names. Prices are placeholders; edit them there.
 - Checkout uses **Stripe Checkout** with inline `price_data`, so nothing needs to be pre-configured in the Stripe Dashboard.
 - Flow: pack card → `POST /api/checkout` → Stripe-hosted checkout → `/support/success?session_id=...` → the success page verifies the session is **paid** and serves the pack via `/api/download` (which re-verifies against Stripe).
 - The free Mini Starter Pack downloads directly with no checkout.
-- `/api/stripe/webhook` receives `checkout.session.completed` — the place to add email delivery / order logging. Configure the endpoint in the Stripe Dashboard and set `STRIPE_WEBHOOK_SECRET`.
+- `/api/stripe/webhook` receives `checkout.session.completed` - the place to add email delivery / order logging. Configure the endpoint in the Stripe Dashboard and set `STRIPE_WEBHOOK_SECRET`.
 
 ### Replacing the placeholder packs
 
@@ -42,8 +42,8 @@ real pack contents (keep the same filenames, or update `file` in
 
 All prose and structured content is isolated from layout:
 
-- [`lib/content.ts`](lib/content.ts) — landing copy, support-hub copy (`COPY`), situations, journey stages, worries, nudge messages. **The disclaimer is medical-safety copy — keep it verbatim.**
-- [`lib/products.ts`](lib/products.ts) — the packs grid + pricing.
+- [`lib/content.ts`](lib/content.ts) - landing copy, support-hub copy (`COPY`), situations, journey stages, worries, nudge messages. **The disclaimer is medical-safety copy - keep it verbatim.**
+- [`lib/products.ts`](lib/products.ts) - the packs grid + pricing.
 
 ## Deploying to Vercel
 

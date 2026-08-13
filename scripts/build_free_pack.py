@@ -193,7 +193,7 @@ def build_story():
         Paragraph("The ADHD Appointment Panic Pack", S["cover_sub"]),
         Paragraph(
             "A calm little starter kit for preparing for your first GP conversation. "
-            "Six short sections. Nothing to sign up for, nothing to solve — "
+            "Six short sections. Nothing to sign up for, nothing to solve - "
             "just one useful next step.", S["body"]),
         Spacer(1, 6),
         Paragraph("Inside:", S["h2"]),
@@ -215,27 +215,27 @@ def build_story():
         "In the UK there are three main routes to an adult ADHD assessment. "
         "All three start the same way: a conversation with your GP.")
     story += [
-        Paragraph("Route 1 — Standard NHS referral", S["h2"]),
+        Paragraph("Route 1 - Standard NHS referral", S["h2"]),
         *bullets([
             "Free. Your GP refers you to your local NHS ADHD service.",
             "Main drawback: the wait. In many areas it runs to years, not months.",
-            "Good fit if cost matters most and you can wait — and you can switch route later.",
+            "Good fit if cost matters most and you can wait - and you can switch route later.",
         ]),
-        Paragraph("Route 2 — Right to Choose (England only)", S["h2"]),
+        Paragraph("Route 2 - Right to Choose (England only)", S["h2"]),
         *bullets([
-            "Still NHS-funded and free to you — but you choose the provider, "
+            "Still NHS-funded and free to you - but you choose the provider, "
             "including independent clinics with NHS contracts.",
             "Waits are often weeks-to-months instead of years.",
             "Your GP sends the referral through the NHS e-Referral system to your chosen provider.",
-            "Availability has been changing in some areas recently — check the current "
+            "Availability has been changing in some areas recently - check the current "
             "position for your area before the appointment (ADHD UK keeps an up-to-date guide at adhduk.co.uk).",
         ]),
-        Paragraph("Route 3 — Private assessment", S["h2"]),
+        Paragraph("Route 3 - Private assessment", S["h2"]),
         *bullets([
             "Fastest, but you pay: typically several hundred pounds to £1,200+ for assessment, "
             "plus ongoing costs if medication follows.",
             "Before booking, ask your GP surgery whether they accept “shared care” from that "
-            "provider — if not, you may pay private prescription prices indefinitely.",
+            "provider - if not, you may pay private prescription prices indefinitely.",
         ]),
         Spacer(1, 4),
         *note_box("Whichever route you take, the preparation is identical: clear examples of "
@@ -245,7 +245,7 @@ def build_story():
 
     # ---- Section 2: GP prep sheet ----
     story += section_header(2, "GP Appointment Prep Sheet",
-        "Fill this in before your appointment — then bring it. If your mind goes blank, "
+        "Fill this in before your appointment - then bring it. If your mind goes blank, "
         "you can literally hand it over. GPs read prepared notes all the time.")
     story += [
         Paragraph("My opening sentence (say this first, in the first 30 seconds)", S["h2"]),
@@ -254,16 +254,16 @@ def build_story():
             "as I can remember, it’s causing real problems in my daily life, and I’d like to "
             "be assessed for ADHD.”", S["small"]),
         *write_lines(2),
-        Paragraph("My top 3 struggles — each with one recent, concrete example", S["h2"]),
+        Paragraph("My top 3 struggles - each with one recent, concrete example", S["h2"]),
         *write_lines(3, "1."),
         *write_lines(3, "2."),
         *write_lines(3, "3."),
         PageBreak(),
-        Paragraph("It goes back a long way — one or two childhood examples", S["h2"]),
+        Paragraph("It goes back a long way - one or two childhood examples", S["h2"]),
         Paragraph("School reports are gold: “easily distracted”, “not fulfilling potential”, "
                   "“bright but doesn’t concentrate”.", S["small"]),
         *write_lines(3),
-        Paragraph("What it costs me — work, money, relationships, health", S["h2"]),
+        Paragraph("What it costs me - work, money, relationships, health", S["h2"]),
         *write_lines(3),
         Paragraph("My ask, written out", S["h2"]),
         Paragraph("Example: “I’d like to be referred for an ADHD assessment. If the local wait "
@@ -281,21 +281,21 @@ def build_story():
     # ---- Section 3: Phone scripts ----
     story += section_header(3, "Brain-Freeze Phone Scripts",
         "Word-for-word lines for the moments phones make everything worse. "
-        "Read them out — nobody on the other end can tell, and nobody cares.")
+        "Read them out - nobody on the other end can tell, and nobody cares.")
     story += [
         *script_box("Booking the appointment",
             "Hi, I’d like to book a GP appointment to discuss being assessed for ADHD. "
-            "It’s not urgent-urgent, but it’s important to me — do you have anything "
+            "It’s not urgent-urgent, but it’s important to me - do you have anything "
             "in the next couple of weeks? A double appointment would help if that’s possible."),
         *script_box("If the receptionist asks why",
             "It’s about a long-term difficulty with focus and organisation that’s affecting "
             "my daily life. I’d like to discuss an ADHD assessment with the GP."),
         *script_box("If your mind goes blank mid-call",
-            "Sorry — I’ve lost my thread, which is honestly part of the problem. "
+            "Sorry - I’ve lost my thread, which is honestly part of the problem. "
             "Give me two seconds… I’m calling to book an appointment about an ADHD assessment."),
         *script_box("In the appointment, if you freeze",
-            "Sorry — my mind’s gone blank, which is actually part of why I’m here. "
-            "I’ve written everything down — can I read from my notes?"),
+            "Sorry - my mind’s gone blank, which is actually part of why I’m here. "
+            "I’ve written everything down - can I read from my notes?"),
         *script_box("If the GP seems dismissive",
             "I understand, but this has been a lifelong pattern and it’s seriously affecting my "
             "work and my health. I’d still like a referral for a proper assessment. "
@@ -309,7 +309,7 @@ def build_story():
     # ---- Section 4: Evidence starter ----
     story += section_header(4, "Tiny Symptom Evidence Starter",
         "Assessments run on evidence, and evidence beats memory. One or two specific examples "
-        "per category is plenty to start — add more whenever something happens.")
+        "per category is plenty to start - add more whenever something happens.")
     cats = [
         ("Focus & attention", "Drifting mid-task, rereading the same paragraph, unfinished projects."),
         ("Time", "Chronic lateness, lost hours, the “loads of time → suddenly late” flip."),
@@ -333,18 +333,18 @@ def build_story():
     story += [
         *script_box("Copy-paste this",
             "I have ADHD and I’m overwhelmed. Here’s everything on my plate right now: "
-            "[paste a messy brain-dump — don’t tidy it]. Ask me questions one at a time to "
+            "[paste a messy brain-dump - don’t tidy it]. Ask me questions one at a time to "
             "find the single most urgent item. Then break that item into steps of five minutes or "
             "less, and tell me only the first step."),
         Paragraph("How to use it well", S["h2"]),
         *bullets([
-            "Don’t tidy the brain-dump — the mess is the data.",
+            "Don’t tidy the brain-dump - the mess is the data.",
             "Answer its questions honestly; short answers are fine.",
             "Do only the first step it gives you. Then come back for the next one.",
             "“Everything else is officially deferred, not failed.”",
         ]),
         Spacer(1, 6),
-        *note_box("AI tools can help you organise — they can’t diagnose you or give medical "
+        *note_box("AI tools can help you organise - they can’t diagnose you or give medical "
                   "advice. Keep health decisions with your GP and qualified clinicians."),
         PageBreak(),
     ]
@@ -364,18 +364,18 @@ def build_story():
             "Samaritans are available 24/7 on 116 123.", S["body"]),
         Paragraph("Useful UK organisations", S["h2"]),
         *bullets([
-            "ADHD UK — adhduk.co.uk (diagnosis routes, incl. Right to Choose)",
-            "AADD-UK — aadduk.org (by and for adults with ADHD; local groups)",
-            "ADHD Foundation — adhdfoundation.org.uk",
-            "ADHDadultUK — adhdadult.uk",
-            "ADDISS — addiss.co.uk",
+            "ADHD UK - adhduk.co.uk (diagnosis routes, incl. Right to Choose)",
+            "AADD-UK - aadduk.org (by and for adults with ADHD; local groups)",
+            "ADHD Foundation - adhdfoundation.org.uk",
+            "ADHDadultUK - adhdadult.uk",
+            "ADDISS - addiss.co.uk",
         ]),
         Spacer(1, 14),
         HRFlowable(width="100%", thickness=1.2, color=INK, spaceAfter=10),
         Paragraph(
             "Ready for more? The Diagnosis Prep Starter Pack (£9) has the full-length GP prep "
             "template, 9 phone scripts, the 8-category evidence builder, a childhood worksheet and "
-            "9 AI prompts — at adhd-assist.vercel.app/starter-pack", S["body"]),
+            "9 AI prompts - at adhd-assist.vercel.app/starter-pack", S["body"]),
         Paragraph("Made with patience, for people who lost theirs.", S["small"]),
     ]
     return story
@@ -387,7 +387,7 @@ def main():
         PDF_PATH, pagesize=A4,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=22 * mm, bottomMargin=18 * mm,
-        title="The ADHD Appointment Panic Pack — ADHD Assist",
+        title="The ADHD Appointment Panic Pack - ADHD Assist",
         author="ADHD Assist",
     )
     frame = Frame(MARGIN, 18 * mm, PAGE_W - 2 * MARGIN, PAGE_H - 40 * mm, id="main")

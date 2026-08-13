@@ -192,7 +192,7 @@ function load() {
   try {
     const raw = localStorage.getItem(LS_KEY);
     if (raw) return Object.assign(defaultState(), JSON.parse(raw));
-  } catch (e) { /* corrupted backup — start fresh */ }
+  } catch (e) { /* corrupted backup - start fresh */ }
   return defaultState();
 }
 let saveTimer, toastTimer;
@@ -308,7 +308,7 @@ const VIEWS = {
     }));
     const next = state.milestones.find(m => m.status !== 'Done');
     p.appendChild(el('div', 'next-up', next
-      ? `👉 <b>What to do next:</b> ${esc(next.m)} — open the matching tab and take the first small step.`
+      ? `👉 <b>What to do next:</b> ${esc(next.m)} - open the matching tab and take the first small step.`
       : '🎉 Every milestone is done. Look after yourself.'));
   },
 
@@ -332,7 +332,7 @@ const VIEWS = {
 
   referral(p) {
     p.appendChild(el('h1', null, 'Referral Log'));
-    p.appendChild(el('p', 'sub', 'Referral details, plus a running log of every call, letter and email — dated.'));
+    p.appendChild(el('p', 'sub', 'Referral details, plus a running log of every call, letter and email - dated.'));
     p.appendChild(el('h2', null, 'Referral details'));
     const d = state.referralDetails;
     const fields = [['by', 'Referred by (GP / surgery)'], ['sent', 'Date sent'], ['to', 'Referred to (provider)'],
@@ -357,13 +357,13 @@ const VIEWS = {
       }
     }));
     p.appendChild(addRowBtn('+ Add contact', () => state.referralLog.push(blankLog())));
-    p.appendChild(el('div', 'note', '⏰ Chase every 6–8 weeks. Set the next reminder the moment you finish each call — “later” is where referrals go to die.'));
+    p.appendChild(el('div', 'note', '⏰ Chase every 6–8 weeks. Set the next reminder the moment you finish each call - “later” is where referrals go to die.'));
   },
 
   providers(p) {
     p.appendChild(el('h1', null, 'Provider Compare'));
     p.appendChild(el('p', 'sub', '22 criteria, three providers side by side. Name the providers in the header row.'));
-    p.appendChild(el('div', 'note', '⚠️ Right to Choose: if you’re in England, check whether each provider offers RTC before paying anything — the same assessment may be free.'));
+    p.appendChild(el('div', 'note', '⚠️ Right to Choose: if you’re in England, check whether each provider offers RTC before paying anything - the same assessment may be free.'));
     const pr = state.providers;
     p.appendChild(table(['Criteria', '', '', ''], t => {
       const nameRow = document.createElement('tr');
@@ -412,7 +412,7 @@ const VIEWS = {
 
   appts(p) {
     p.appendChild(el('h1', null, 'Appointment Log'));
-    p.appendChild(el('p', 'sub', 'A row for every appointment — including “how it felt”, because that’s data too.'));
+    p.appendChild(el('p', 'sub', 'A row for every appointment - including “how it felt”, because that’s data too.'));
     p.appendChild(table(['Date', 'Type', 'Who with', 'What was agreed', 'Next step', 'How it felt'], t => {
       for (const a of state.appts) {
         const tr = document.createElement('tr');
@@ -454,21 +454,21 @@ const VIEWS = {
       }
     }));
     p.appendChild(el('div', 'note',
-      '⚕️ Never change a dose except as directed by your prescriber. Concerning side effects — chest pain, severe mood changes, thoughts of self-harm — mean contacting your prescriber or NHS 111 promptly; call 999 in an emergency.'));
+      '⚕️ Never change a dose except as directed by your prescriber. Concerning side effects - chest pain, severe mood changes, thoughts of self-harm - mean contacting your prescriber or NHS 111 promptly; call 999 in an emergency.'));
   },
 
   help(p) {
     p.appendChild(el('h1', null, 'How to Use'));
     const h = el('div', 'howto', `
       <p><b>Everything saves automatically</b> in this browser (you'll see “Saved ✓” bottom-right). No account, no internet needed.</p>
-      <p><b>Click any cell to edit it.</b> Status cells are dropdowns — green means done. “+ Add” buttons put new rows at the bottom of each table.</p>
-      <p><b>📊 Dashboard</b> — your milestones and the “what to do next” line. When stuck, do the first not-done milestone. That's always the answer.</p>
-      <p><b>✅ Admin Tracker</b> — the whole process as one task list, in order.</p>
-      <p><b>📅 Referral Log</b> — referral details + every contact, dated. Dates win arguments with waiting lists.</p>
-      <p><b>🏥 Provider Compare</b> — 22 criteria, three providers. Fill it in as you research.</p>
-      <p><b>📁 Documents / 📝 Appointment Log / 💊 Medication</b> — file, log, track. One minute at a time.</p>
-      <p><b>Backups:</b> your data lives in this browser on this device. Use <b>Export backup</b> (top right) to save a file, and <b>Import</b> to restore it or move to another device. Clearing browser data will erase the tracker — export first.</p>
-      <p style="color:var(--ink-soft)">Educational only — this system organises your process; it is not medical advice, a diagnostic tool, or a replacement for qualified healthcare. If you're worried about your health or safety: GP, NHS 111, or 999 in an emergency. Samaritans: 116 123.</p>
+      <p><b>Click any cell to edit it.</b> Status cells are dropdowns - green means done. “+ Add” buttons put new rows at the bottom of each table.</p>
+      <p><b>📊 Dashboard</b> - your milestones and the “what to do next” line. When stuck, do the first not-done milestone. That's always the answer.</p>
+      <p><b>✅ Admin Tracker</b> - the whole process as one task list, in order.</p>
+      <p><b>📅 Referral Log</b> - referral details + every contact, dated. Dates win arguments with waiting lists.</p>
+      <p><b>🏥 Provider Compare</b> - 22 criteria, three providers. Fill it in as you research.</p>
+      <p><b>📁 Documents / 📝 Appointment Log / 💊 Medication</b> - file, log, track. One minute at a time.</p>
+      <p><b>Backups:</b> your data lives in this browser on this device. Use <b>Export backup</b> (top right) to save a file, and <b>Import</b> to restore it or move to another device. Clearing browser data will erase the tracker - export first.</p>
+      <p style="color:var(--ink-soft)">Educational only - this system organises your process; it is not medical advice, a diagnostic tool, or a replacement for qualified healthcare. If you're worried about your health or safety: GP, NHS 111, or 999 in an emergency. Samaritans: 116 123.</p>
     `);
     p.appendChild(h);
   },
@@ -500,7 +500,7 @@ document.getElementById('importFile').addEventListener('change', (e) => {
       save();
       render();
     } catch {
-      alert('Could not read that file — is it the exported backup JSON?');
+      alert('Could not read that file - is it the exported backup JSON?');
     }
   };
   reader.readAsText(file);

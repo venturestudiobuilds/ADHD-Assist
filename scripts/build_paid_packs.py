@@ -26,7 +26,7 @@ SITE = "adhd-assist.vercel.app"
 
 
 # ===========================================================================
-# Shared section builders (used by Starter and Full — Full passes its own
+# Shared section builders (used by Starter and Full - Full passes its own
 # section numbers/totals)
 # ===========================================================================
 
@@ -35,20 +35,20 @@ def sec_gp_prep(num, total):
         "Work through Parts A–H before your appointment, then bring the whole thing. "
         "It doubles as your script if your mind goes blank.")
     f += [
-        Paragraph("Part A — Why now?", S["h2"]),
+        Paragraph("Part A - Why now?", S["h2"]),
         Paragraph("One or two sentences on what made you finally book this. "
                   "(“I read something and it all clicked” is a perfectly good answer.)", S["small"]),
         *write_lines(2),
-        Paragraph("Part B — The history", S["h2"]),
+        Paragraph("Part B - The history", S["h2"]),
         Paragraph("How far back does this go? School reports, teachers’ comments, family stories. "
                   "Assessors specifically look for evidence before age 12.", S["small"]),
         *write_lines(4),
-        Paragraph("Part C — Current struggles (top 3, with recent examples)", S["h2"]),
+        Paragraph("Part C - Current struggles (top 3, with recent examples)", S["h2"]),
         *write_lines(3, "1."),
         *write_lines(3, "2."),
         *write_lines(3, "3."),
         PageBreak(),
-        Paragraph("Part D — More things that are true (tick what applies)", S["h2"]),
+        Paragraph("Part D - More things that are true (tick what applies)", S["h2"]),
         *checks([
             "I lose focus even during things I care about",
             "I put off tasks until they become emergencies",
@@ -59,25 +59,25 @@ def sec_gp_prep(num, total):
             "I have periods of intense focus where hours disappear",
             "Small criticisms hit me much harder than they should",
         ]),
-        Paragraph("Part E — The impact", S["h2"]),
+        Paragraph("Part E - The impact", S["h2"]),
         Paragraph("What has this cost you? Work, study, money, relationships, driving, health, "
                   "self-esteem. Impact is what turns “quirks” into a referral.", S["small"]),
         *write_lines(4),
-        Paragraph("Part F — My opening statement", S["h2"]),
+        Paragraph("Part F - My opening statement", S["h2"]),
         Paragraph("Write it, practise it once out loud, say it in the first 30 seconds.", S["small"]),
         *script_box("A shape that works",
             "I’ve struggled with focus, organisation and memory my whole life. It’s causing real "
             "problems with [work / money / relationships], and I’d like to be assessed for ADHD."),
         *write_lines(2),
         PageBreak(),
-        Paragraph("Part G — Questions to ask before you leave", S["h2"]),
+        Paragraph("Part G - Questions to ask before you leave", S["h2"]),
         *checks([
             "Where are you referring me, and roughly how long is the wait?",
             "Am I eligible for Right to Choose? (England only)",
-            "How will I hear about the referral — and who do I chase if I hear nothing?",
+            "How will I hear about the referral - and who do I chase if I hear nothing?",
             "Is there anything I should do or collect while I wait?",
         ]),
-        Paragraph("Part H — Straight after the appointment", S["h2"]),
+        Paragraph("Part H - Straight after the appointment", S["h2"]),
         *checks([
             "Write down what was agreed while it’s fresh (same hour if possible)",
             "Note the referral destination, date, and any reference given",
@@ -96,7 +96,7 @@ EVIDENCE_CATS = [
     ("Organisation", "Unopened post, chaotic inbox, systems that collapse, abandoned projects."),
     ("Memory", "Forgetting commitments minutes after making them; lost keys, phone, wallet; blank moments."),
     ("Emotional regulation", "Quick frustration, criticism that lands far too hard, big feelings that take hours to settle."),
-    ("Impulsivity", "Spending, blurting, snap decisions — regretted almost immediately."),
+    ("Impulsivity", "Spending, blurting, snap decisions - regretted almost immediately."),
     ("Restlessness", "Feeling driven by a motor; fidgeting; a mind that never idles, even when exhausted."),
 ]
 
@@ -127,7 +127,7 @@ def sec_evidence(num, total):
 def sec_childhood(num, total):
     f = section_header(num, total, "Childhood & Adult Examples Worksheet",
         "Assessment criteria ask for evidence that traits were present in childhood. "
-        "You don’t need perfect memories — patterns and stories count.")
+        "You don’t need perfect memories - patterns and stories count.")
     f += [
         Paragraph("Primary school (roughly ages 5–11)", S["h2"]),
         Paragraph("Report comments, lost belongings, daydreaming, trouble sitting still, "
@@ -141,7 +141,7 @@ def sec_childhood(num, total):
         *write_lines(3),
         PageBreak(),
         Paragraph("Early adulthood", S["h2"]),
-        Paragraph("First jobs, house shares, bills, driving, relationships — where did the "
+        Paragraph("First jobs, house shares, bills, driving, relationships - where did the "
                   "pattern follow you?", S["small"]),
         *write_lines(3),
         Paragraph("The “always” list", S["h2"]),
@@ -150,7 +150,7 @@ def sec_childhood(num, total):
         *write_lines(3),
         Paragraph("Who could confirm the childhood picture?", S["h2"]),
         Paragraph("A parent, sibling, or old friend. Some providers ask for an informant "
-                  "questionnaire — warn this person in advance.", S["small"]),
+                  "questionnaire - warn this person in advance.", S["small"]),
         *write_lines(2),
         *note_box("If you have old school reports, dig them out and bring copies. They are the "
                   "single most persuasive piece of childhood evidence."),
@@ -162,20 +162,20 @@ def sec_childhood(num, total):
 def sec_scripts(num, total, include_rtc):
     n_scripts = 10 if include_rtc else 9
     f = section_header(num, total, f"Phone Scripts: Every Scenario ({n_scripts} scripts)",
-        "Read them out word-for-word — nobody can tell, and nobody cares. "
+        "Read them out word-for-word - nobody can tell, and nobody cares. "
         "Adapt the bracketed bits.")
     f += [
         *script_box("1 · Booking the appointment",
             "Hi, I’d like to book a GP appointment to discuss being assessed for ADHD. "
             "Do you have anything in the next couple of weeks?"),
         *script_box("2 · Asking for a double appointment",
-            "It’s a conversation that won’t fit in ten minutes — could I book a double "
+            "It’s a conversation that won’t fit in ten minutes - could I book a double "
             "appointment, or with whichever GP has the longest slot?"),
         *script_box("3 · If the receptionist asks why",
             "It’s about a long-term difficulty with focus and organisation that’s affecting "
             "my daily life. I’d like to discuss an ADHD assessment with the GP."),
         *script_box("4 · If your mind goes blank mid-call",
-            "Sorry — I’ve lost my thread, which is honestly part of the problem. Give me two "
+            "Sorry - I’ve lost my thread, which is honestly part of the problem. Give me two "
             "seconds… I’m calling about booking an appointment for an ADHD assessment."),
         *script_box("5 · Online form / e-consult wording",
             "Lifelong difficulties with focus, organisation and memory, now causing significant "
@@ -183,8 +183,8 @@ def sec_scripts(num, total, include_rtc):
             "and referral. Have prepared notes and examples."),
         PageBreak(),
         *script_box("6 · In the appointment, if you freeze",
-            "Sorry — my mind’s gone blank, which is actually part of why I’m here. I’ve written "
-            "everything down — can I read from my notes?"),
+            "Sorry - my mind’s gone blank, which is actually part of why I’m here. I’ve written "
+            "everything down - can I read from my notes?"),
         *script_box("7 · If the GP seems dismissive",
             "I understand, but this has been a lifelong pattern and it’s seriously affecting my "
             "work and my health. I’d still like a referral for a proper assessment. Could we "
@@ -202,7 +202,7 @@ def sec_scripts(num, total, include_rtc):
         f += script_box("10 · Asking for a Right to Choose referral (England)",
             "I’d like to use my legal Right to Choose and be referred to [provider name] for my "
             "ADHD assessment. They hold an NHS contract, so the referral goes through the "
-            "e-Referral system — I can leave their details with you.")
+            "e-Referral system - I can leave their details with you.")
     f += [
         *note_box("You are allowed to read from notes. You are allowed to ask again. "
                   "None of this counts against you."),
@@ -214,11 +214,11 @@ def sec_scripts(num, total, include_rtc):
 def sec_followup(num, total):
     f = section_header(num, total, "Appointment Follow-Up Checklist",
         "The hour after an appointment is where progress either gets banked or evaporates. "
-        "Run this after every appointment — GP, provider, or review.")
+        "Run this after every appointment - GP, provider, or review.")
     f += [
         Paragraph("Same hour", S["h2"]),
         *checks([
-            "Write down what was said and agreed — three bullet points is enough",
+            "Write down what was said and agreed - three bullet points is enough",
             "Note any names, reference numbers, or timescales mentioned",
             "If anything was promised (“we’ll send…”, “you’ll hear within…”), note the date it’s due",
         ]),
@@ -226,7 +226,7 @@ def sec_followup(num, total):
         *checks([
             "Diary the chase-up for anything promised, at its due date",
             "File any paperwork in one place (one folder, physical or digital)",
-            "Tell whoever supports you what happened — saying it out loud helps it stick",
+            "Tell whoever supports you what happened - saying it out loud helps it stick",
         ]),
         Paragraph("Within 2 weeks", S["h2"]),
         *checks([
@@ -237,7 +237,7 @@ def sec_followup(num, total):
         *bullets([
             "You can book another appointment with a different GP at the same surgery.",
             "You can put the request in writing (letter or e-consult) and ask for it to be recorded.",
-            "A “no” from one appointment is not a diagnosis — it’s one conversation.",
+            "A “no” from one appointment is not a diagnosis - it’s one conversation.",
         ]),
         *write_lines(3, "Notes:"),
         PageBreak(),
@@ -248,7 +248,7 @@ def sec_followup(num, total):
 AI_PROMPTS_STARTER = [
     ("Overwhelm triage", "I have ADHD and I’m overwhelmed. Here’s everything on my plate: [brain-dump]. Ask me questions one at a time to find the single most urgent item, then break it into steps of five minutes or less, and tell me only the first step."),
     ("Turning chaos into GP notes", "Here’s a messy description of my struggles: [paste]. Rewrite it as three clear bullet points a GP can absorb in one minute, each with the pattern, one example, and the impact."),
-    ("Finding childhood examples", "Interview me, one question at a time, about my school years — focus, homework, losing things, sitting still, teachers’ comments. Then summarise the ADHD-relevant patterns you noticed."),
+    ("Finding childhood examples", "Interview me, one question at a time, about my school years - focus, homework, losing things, sitting still, teachers’ comments. Then summarise the ADHD-relevant patterns you noticed."),
     ("The opening statement", "Using these notes [paste], draft a two-sentence opening statement for my GP appointment asking for an ADHD assessment. Plain, direct, no drama."),
     ("Rehearsing the appointment", "Role-play a UK GP appointment with me. You’re a kind but time-pressed GP. Let me practise asking for an ADHD assessment, then give me feedback on what was clear and what was vague."),
     ("Decoding a letter", "Explain this NHS/provider letter in plain English: [paste]. What is it saying, what do they want from me, and what should I do next? Note anything time-sensitive."),
@@ -265,8 +265,8 @@ AI_PROMPTS_FULL_EXTRA = [
     ("Referral limbo check-in", "It’s been [X weeks] since my referral to [provider]. Based on UK norms, is it time to chase? Draft the chase message, and tell me what to ask so the answer is actually useful."),
     ("Assessment day prep", "My ADHD assessment is on [date] with [provider]. Build me a prep sheet: what to bring, the five points I must not forget to say [paste notes], and questions to ask at the end."),
     ("Decoding the report", "Here’s the summary of my assessment report: [paste]. Explain it in plain English, list the recommendations, and tell me what to ask my GP and the provider next."),
-    ("Not diagnosed — now what", "I wasn’t diagnosed with ADHD. Here’s what the report said: [paste]. Help me understand the reasoning, what alternative explanations were suggested, and what sensible next steps look like."),
-    ("Shared care request", "Draft a polite letter to my GP surgery asking whether they will accept a shared-care agreement with [provider] for ADHD medication after titration — and, if not, asking for the reason in writing."),
+    ("Not diagnosed - now what", "I wasn’t diagnosed with ADHD. Here’s what the report said: [paste]. Help me understand the reasoning, what alternative explanations were suggested, and what sensible next steps look like."),
+    ("Shared care request", "Draft a polite letter to my GP surgery asking whether they will accept a shared-care agreement with [provider] for ADHD medication after titration - and, if not, asking for the reason in writing."),
     ("Titration diary summary", "Here are my daily titration notes: [paste]. Summarise into what my prescriber needs: overall trend, side effects and their timing, wear-off pattern, and three questions worth asking at review."),
     ("Medication review prep", "My medication review is on [date]. From these notes [paste], produce a one-page summary: what’s working, what isn’t, changes since last review, and what I want from this appointment."),
 ]
@@ -278,7 +278,7 @@ def sec_ai_prompts(num, total, full):
         sub = ("Copy-paste into ChatGPT, Claude, or Gemini. Organised by stage. "
                "Replace the [bracketed] parts with your own material.")
     else:
-        title = "AI Prompt Pack — Appointment & Admin Edition (9 prompts)"
+        title = "AI Prompt Pack - Appointment & Admin Edition (9 prompts)"
         sub = ("Copy-paste into ChatGPT, Claude, or Gemini. "
                "Replace the [bracketed] parts with your own material.")
     f = section_header(num, total, title, sub)
@@ -288,7 +288,7 @@ def sec_ai_prompts(num, total, full):
         if i % 3 == 2:
             f.append(Spacer(1, 2))
     f += [
-        *note_box("AI tools help you organise and rehearse — they can’t diagnose you or give "
+        *note_box("AI tools help you organise and rehearse - they can’t diagnose you or give "
                   "medical advice. Keep health decisions with qualified clinicians."),
         PageBreak(),
     ]
@@ -338,23 +338,23 @@ def sec_referral_docs(num, total):
 
 def sec_routes_full(num, total):
     f = section_header(num, total, "Understanding Your Routes",
-        "The complete guide to the three UK routes — and how to pick.")
+        "The complete guide to the three UK routes - and how to pick.")
     f += [
-        Paragraph("Route 1 — Standard NHS referral", S["h2"]),
+        Paragraph("Route 1 - Standard NHS referral", S["h2"]),
         *bullets([
             "Free. GP refers you to the local NHS ADHD service.",
             "Waits in many areas run to years. Ask for the current local estimate.",
             "You can switch to Right to Choose or private later without starting over.",
         ]),
-        Paragraph("Route 2 — Right to Choose (England only)", S["h2"]),
+        Paragraph("Route 2 - Right to Choose (England only)", S["h2"]),
         *bullets([
-            "NHS-funded and free — you choose any provider holding an NHS contract.",
+            "NHS-funded and free - you choose any provider holding an NHS contract.",
             "Waits are often weeks-to-months. Your GP refers via the NHS e-Referral system.",
             "You must be registered with an English GP practice.",
-            "Availability has been changing in some areas — check the current position "
+            "Availability has been changing in some areas - check the current position "
             "(ADHD UK’s guide at adhduk.co.uk is kept up to date).",
         ]),
-        Paragraph("Route 3 — Private", S["h2"]),
+        Paragraph("Route 3 - Private", S["h2"]),
         *bullets([
             "Fastest. Typical assessment cost: several hundred pounds to £1,200+.",
             "Budget the whole journey: assessment + titration + prescriptions + annual reviews.",
@@ -400,10 +400,10 @@ PROVIDER_CRITERIA = [
 
 def sec_provider_comparison(num, total):
     f = section_header(num, total, "Provider Comparison Template",
-        "22 criteria, three providers, side by side. Fill it in as you research — "
+        "22 criteria, three providers, side by side. Fill it in as you research - "
         "the decision usually makes itself.")
     f += note_box("Right to Choose warning: if you’re in England, check whether each provider "
-                  "offers RTC before you pay anything — the same assessment may be free.")
+                  "offers RTC before you pay anything - the same assessment may be free.")
     rows = [[c, "", "", ""] for c in PROVIDER_CRITERIA]
     f += grid_table(
         ["Criteria", "Provider 1:", "Provider 2:", "Provider 3:"],
@@ -436,7 +436,7 @@ def sec_referral_tracker(num, total):
              ["Report received", "", "", ""]],
             [CONTENT_W * 0.34, CONTENT_W * 0.18, CONTENT_W * 0.18, CONTENT_W * 0.30],
             row_h=20),
-        Paragraph("Contact log (every call, letter and email — dated)", S["h2"]),
+        Paragraph("Contact log (every call, letter and email - dated)", S["h2"]),
         *grid_table(
             ["Date", "Who", "What was said", "Next step"],
             [["", "", "", ""] for _ in range(9)],
@@ -497,13 +497,13 @@ def sec_admin_tracker(num, total):
 
 def sec_weekly_planner(num, total):
     f = section_header(num, total, "Weekly Survival Planner",
-        "For the wait between referral and assessment. The goal is not a productive week — "
+        "For the wait between referral and assessment. The goal is not a productive week - "
         "it’s a survivable one that doesn’t generate new crises.")
     f += [
         Paragraph("The minimum viable week", S["h2"]),
         *bullets([
             "One sleep anchor: a consistent-ish wake time beats a perfect bedtime.",
-            "One priority per day — not three. Write it the night before.",
+            "One priority per day - not three. Write it the night before.",
             "One admin slot (30 minutes, timer on) for the scariest envelope or email.",
             "One thing you’re allowed to drop this week, on purpose, guilt-free.",
         ]),
@@ -516,7 +516,7 @@ def sec_weekly_planner(num, total):
         *checks([
             "Has the referral been chased on schedule?",
             "Is anything new worth adding to the evidence sheets?",
-            "Is my mental health holding? (If not — that’s a GP matter now, not after the assessment.)",
+            "Is my mental health holding? (If not - that’s a GP matter now, not after the assessment.)",
         ]),
         *write_lines(3, "Notes to self:"),
         PageBreak(),
@@ -532,9 +532,9 @@ def sec_assessment_day(num, total):
         Paragraph("What to expect", S["h2"]),
         *bullets([
             "A structured diagnostic interview about your life now and in childhood.",
-            "Questionnaires (sometimes sent in advance — return them promptly).",
+            "Questionnaires (sometimes sent in advance - return them promptly).",
             "Possibly an informant interview or questionnaire about your childhood.",
-            "Honest answers beat impressive ones. Bad days are data too — don’t mask.",
+            "Honest answers beat impressive ones. Bad days are data too - don’t mask.",
         ]),
         Paragraph("Logistics", S["h2"]),
         *grid_table(
@@ -548,8 +548,8 @@ def sec_assessment_day(num, total):
         Paragraph("Questions to ask at the end", S["h2"]),
         *checks([
             "When and how will I get the report?",
-            "If diagnosed — what happens next, and what’s the wait for treatment?",
-            "If not diagnosed — what explanations should be explored instead?",
+            "If diagnosed - what happens next, and what’s the wait for treatment?",
+            "If not diagnosed - what explanations should be explored instead?",
             "Who do I contact if I have questions once the report arrives?",
         ]),
         *write_lines(3, "Notes straight after (same day):"),
@@ -566,14 +566,14 @@ def sec_after_assessment(num, total):
         Paragraph("If you were diagnosed", S["h2"]),
         *checks([
             "What subtype/presentation was recorded, and what severity?",
-            "What are the treatment options — medication, coaching, therapy, adjustments?",
+            "What are the treatment options - medication, coaching, therapy, adjustments?",
             "If medication: what’s the titration plan, and the wait to start?",
             "Will you send a shared-care agreement to my GP once I’m stable?",
             "What should I tell my employer/university, and is a letter available?",
         ]),
         Paragraph("If you were not diagnosed", S["h2"]),
         *checks([
-            "What explanations fit the difficulties better — and what’s the evidence?",
+            "What explanations fit the difficulties better - and what’s the evidence?",
             "Was childhood evidence the gap? Could an informant change the picture?",
             "Can I see exactly which criteria were and weren’t met?",
             "What support exists for the difficulties regardless of label?",
@@ -581,8 +581,8 @@ def sec_after_assessment(num, total):
         ]),
         Paragraph("Reading the report", S["h2"]),
         *bullets([
-            "Check the facts: history, dates, quotes. Factual errors can be corrected — ask.",
-            "Find the recommendations section — that’s the part your GP acts on.",
+            "Check the facts: history, dates, quotes. Factual errors can be corrected - ask.",
+            "Find the recommendations section - that’s the part your GP acts on.",
             "If anything is unclear, you’re entitled to ask the assessor to explain it.",
         ]),
         *write_lines(3, "My questions for the follow-up:"),
@@ -594,7 +594,7 @@ def sec_after_assessment(num, total):
 def sec_shared_care(num, total):
     f = section_header(num, total, "Shared Care Question Sheet",
         "Shared care moves routine prescribing to your NHS GP after titration. "
-        "Ask these early — the answers change which provider makes sense.")
+        "Ask these early - the answers change which provider makes sense.")
     f += [
         Paragraph("Ask your GP surgery", S["h2"]),
         *checks([
@@ -607,15 +607,15 @@ def sec_shared_care(num, total):
         *checks([
             "How often do GP surgeries actually accept your shared-care agreements?",
             "At what point in titration do you send the agreement?",
-            "If my GP refuses — what are my options and ongoing costs with you?",
+            "If my GP refuses - what are my options and ongoing costs with you?",
             "Who handles prescriptions in the gap between titration and shared care starting?",
         ]),
         Paragraph("If shared care is refused", S["h2"]),
         *bullets([
             "Get the surgery’s reason in writing.",
-            "Ask the provider to contact the surgery directly — some will.",
+            "Ask the provider to contact the surgery directly - some will.",
             "Budget for private prescribing while you decide (switching GP practice is "
-            "sometimes an option — ask about the new surgery’s policy before moving).",
+            "sometimes an option - ask about the new surgery’s policy before moving).",
         ]),
         *write_lines(3, "Answers / notes:"),
         PageBreak(),
@@ -653,7 +653,7 @@ def sec_medication_log(num, total):
         Paragraph("Questions for my next review", S["h2"]),
         *write_lines(3),
         *note_box("Never change a dose except as directed by your prescriber. Concerning side "
-                  "effects — chest pain, severe mood changes, thoughts of self-harm — mean "
+                  "effects - chest pain, severe mood changes, thoughts of self-harm - mean "
                   "contacting your prescriber or NHS 111 promptly; 999 in an emergency."),
         PageBreak(),
     ]
@@ -680,7 +680,7 @@ def build_starter_pdf(path):
     story = cover(
         "Diagnosis Prep<br/>Starter Pack",
         "From “I think I have ADHD” to a GP referral",
-        "Your step-by-step system for the first stretch of the journey — "
+        "Your step-by-step system for the first stretch of the journey - "
         "without losing your mind in the process.",
         ["Full GP appointment prep template (Parts A–H)",
          "Full symptom evidence builder (8 categories)",
@@ -700,8 +700,8 @@ def build_starter_pdf(path):
     story += closing(
         "Going further? The Full Diagnosis Prep & Survival Pack (£24) adds the route guide, "
         "provider comparison, referral & admin trackers, weekly survival planner, assessment "
-        f"day prep, shared care questions, titration log and a 20-prompt AI library — at {SITE}/full-pack")
-    build_pdf(path, "Diagnosis Prep Starter Pack — ADHD Assist",
+        f"day prep, shared care questions, titration log and a 20-prompt AI library - at {SITE}/full-pack")
+    build_pdf(path, "Diagnosis Prep Starter Pack - ADHD Assist",
               f"Diagnosis Prep Starter Pack  ·  {SITE}", story)
 
 
@@ -709,7 +709,7 @@ def build_full_pdf(path):
     T = 15
     story = cover(
         "Full Diagnosis Prep<br/>&amp; Survival Pack",
-        "From suspicion to titration — the complete system",
+        "From suspicion to titration - the complete system",
         "Everything from first GP appointment to medication reviews, so you never "
         "have to hold the whole process in your head.",
         ["Understanding your routes (with comparison table)",
@@ -737,8 +737,8 @@ def build_full_pdf(path):
     story += sec_ai_prompts(15, T, full=True)
     story += closing(
         "Want a live tracking system too? The ADHD Admin System (£12, or £35 bundled with this "
-        f"pack) is an interactive tracker — browser app, spreadsheet and Notion guide — at {SITE}/admin-system")
-    build_pdf(path, "Full Diagnosis Prep & Survival Pack — ADHD Assist",
+        f"pack) is an interactive tracker - browser app, spreadsheet and Notion guide - at {SITE}/admin-system")
+    build_pdf(path, "Full Diagnosis Prep & Survival Pack - ADHD Assist",
               f"Full Diagnosis Prep & Survival Pack  ·  {SITE}", story)
 
 
@@ -792,9 +792,9 @@ def build_admin_xlsx(path):
     # Dashboard
     ws = wb.active
     ws.title = "Dashboard"
-    ws["A1"] = "ADHD Admin System — Dashboard"
+    ws["A1"] = "ADHD Admin System - Dashboard"
     ws["A1"].font = title_font
-    ws["A3"] = "Milestones (mark Done as you go — the tracker tabs hold the detail)"
+    ws["A3"] = "Milestones (mark Done as you go - the tracker tabs hold the detail)"
     ws["A3"].font = Font(bold=True, color=INK_HEX)
     milestones = ["GP appointment booked", "GP appointment attended", "Referral sent",
                   "Referral confirmed", "Questionnaires returned", "Assessment date offered",
@@ -820,20 +820,20 @@ def build_admin_xlsx(path):
 
     # Admin Tracker
     tasks = [(stage, task) for stage, ts in ADMIN_TASKS for task in ts]
-    sheet("Admin Tracker", "Admin Tracker — the whole process, one list",
+    sheet("Admin Tracker", "Admin Tracker - the whole process, one list",
           ["Stage", "Task", "Status", "Due / done", "Notes"],
           [18, 46, 14, 14, 36],
           [[s, t, "Not started", "", ""] for s, t in tasks],
           status_col="C", status_opts=["Not started", "In progress", "Done"])
 
     # Referral Log
-    sheet("Referral Log", "Referral Log — details + every contact, dated",
+    sheet("Referral Log", "Referral Log - details + every contact, dated",
           ["Date", "Who / organisation", "What was said", "Next step + who owes it"],
           [13, 26, 44, 34],
           [["", "", "", ""] for _ in range(25)])
 
     # Provider Compare
-    sheet("Provider Compare", "Provider Comparison — 22 criteria, 3 providers",
+    sheet("Provider Compare", "Provider Comparison - 22 criteria, 3 providers",
           ["Criteria", "Provider 1", "Provider 2", "Provider 3"],
           [42, 24, 24, 24],
           [[c, "", "", ""] for c in PROVIDER_CRITERIA])
@@ -848,14 +848,14 @@ def build_admin_xlsx(path):
            [("Assessment & after", d) for d in
             ["Assessment report", "Diagnosis letter (if applicable)",
              "Shared care agreement", "Prescriptions / titration schedule"]]
-    sheet("Documents", "Documents — pre-listed across 3 stages",
+    sheet("Documents", "Documents - pre-listed across 3 stages",
           ["Stage", "Document", "Priority", "Status", "Where it lives"],
           [18, 36, 12, 14, 30],
           [[s, d, "High", "Not started", ""] for s, d in docs],
           status_col="D", status_opts=["Not started", "In progress", "Done"])
 
     # Appointment Log
-    sheet("Appointment Log", "Appointment Log — add a row per appointment",
+    sheet("Appointment Log", "Appointment Log - add a row per appointment",
           ["Date", "Type", "Who with", "What was agreed", "Next step", "How it felt"],
           [13, 16, 20, 34, 26, 22],
           [["", "", "", "", "", ""] for _ in range(20)],
@@ -868,7 +868,7 @@ def build_admin_xlsx(path):
         med_rows.append([f"Week {week}", "", "", "", "", "", ""])
         for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]:
             med_rows.append([day, "", "", "", "", "", ""])
-    sheet("Medication", "Medication — 14+ day daily log (rate 1–5)",
+    sheet("Medication", "Medication - 14+ day daily log (rate 1–5)",
           ["Day", "Focus", "Mood", "Energy", "Appetite", "Sleep", "Side effects / notes"],
           [12, 9, 9, 9, 10, 9, 44], med_rows)
 
@@ -879,11 +879,11 @@ def build_admin_xlsx(path):
     ws.column_dimensions["A"].width = 100
     tips = [
         "", "Each tab covers one stage of the process. Start at the Dashboard.",
-        "Status cells have dropdowns — click a cell and pick from the list.",
+        "Status cells have dropdowns - click a cell and pick from the list.",
         "Add rows anywhere; the formatting copies down if you insert within the table.",
-        "Log EVERY contact in the Referral Log — dates win arguments with waiting lists.",
+        "Log EVERY contact in the Referral Log - dates win arguments with waiting lists.",
         "The web-app version of this system (in the same download) saves automatically in your browser.",
-        "", "Educational only — see the disclaimer in your pack and on the website. Not medical advice.",
+        "", "Educational only - see the disclaimer in your pack and on the website. Not medical advice.",
     ]
     for t in tips:
         ws.append([t])
@@ -903,19 +903,19 @@ def build_notion_guide(path):
         *bullets([
             "Create a new page called “ADHD Admin System”. Give it an icon you like seeing.",
             "Add a Callout at the top: “One list. One log. Chase every 6–8 weeks.”",
-            "Everything below lives inside this one page — resist making it fancy.",
+            "Everything below lives inside this one page - resist making it fancy.",
         ]),
         *section_header(2, 4, "Create the two databases"),
-        Paragraph("Database 1 — “Tasks & Milestones” (table)", S["h2"]),
+        Paragraph("Database 1 - “Tasks & Milestones” (table)", S["h2"]),
         *bullets([
             "Properties: Name (title) · Stage (select: Before GP / Referral / Waiting / "
             "Assessment / Treatment) · Status (select: Not started / In progress / Done) · "
             "Due (date) · Notes (text).",
             "Copy the tasks in from the Admin Tracker tab of the spreadsheet (paste as new rows).",
-            "Add a Board view grouped by Status — this becomes your dashboard.",
+            "Add a Board view grouped by Status - this becomes your dashboard.",
             "Add a filtered view “Next up”: Status is Not started, sorted by Stage.",
         ]),
-        Paragraph("Database 2 — “Contact Log” (table)", S["h2"]),
+        Paragraph("Database 2 - “Contact Log” (table)", S["h2"]),
         *bullets([
             "Properties: What was said (title) · Date (date) · Who (text) · "
             "Next step (text) · Owed by (select: Me / Them).",
@@ -926,30 +926,30 @@ def build_notion_guide(path):
         *bullets([
             "Provider Compare: a simple table block with the 22 criteria from the spreadsheet "
             "as rows and three provider columns.",
-            "Documents: a checklist (to-do blocks) grouped under three headings — "
+            "Documents: a checklist (to-do blocks) grouped under three headings - "
             "Before GP / Referral stage / Assessment & after.",
             "Appointment Log: either a third database (copy Contact Log, add a Type select: "
             "GP / Assessment / Titration / Review) or extra rows in Contact Log.",
             "Medication: a table block with Day / Focus / Mood / Energy / Appetite / Sleep / "
-            "Notes columns — duplicate it for each titration week.",
+            "Notes columns - duplicate it for each titration week.",
         ]),
         *section_header(4, 4, "Make it ADHD-proof"),
         *bullets([
             "Pin the page to your sidebar favourites and phone home screen.",
-            "Set ONE recurring reminder: “Open the Admin System” — weekly, same day, same time.",
+            "Set ONE recurring reminder: “Open the Admin System” - weekly, same day, same time.",
             "When you don’t know what to do next: open “Next up”, do the top item only.",
             "Don’t redesign the system when overwhelmed. Using an ugly system beats "
             "building a beautiful one.",
         ]),
         Spacer(1, 10),
-        *note_box("Educational only — this system organises your process; it is not medical "
+        *note_box("Educational only - this system organises your process; it is not medical "
                   "advice. See the full disclaimer in your pack."),
     ]
-    build_pdf(path, "ADHD Admin System — Notion Build Guide — ADHD Assist",
+    build_pdf(path, "ADHD Admin System - Notion Build Guide - ADHD Assist",
               f"ADHD Admin System · Notion Build Guide  ·  {SITE}", story)
 
 
-ADMIN_README = """ADHD Admin System — what's in this download
+ADMIN_README = """ADHD Admin System - what's in this download
 ============================================
 
 1. ADHD-Admin-System.html
@@ -967,7 +967,7 @@ ADMIN_README = """ADHD Admin System — what's in this download
 3. Notion-Build-Guide.pdf
    Step-by-step instructions to rebuild the system as a Notion workspace.
 
-Educational only — not medical advice. Full disclaimer on the website.
+Educational only - not medical advice. Full disclaimer on the website.
 """
 
 
