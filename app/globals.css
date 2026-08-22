@@ -2021,8 +2021,20 @@ button:focus-visible {
   .scroll-nudge-bubble-wrap { right: 14px; bottom: 14px; max-width: min(240px, 80vw); }
   .scroll-nudge-bubble { font-size: 13px; padding: 10px 13px; }
 
-  /* About card: comfortable width, still anchored on-screen */
-  .about-card { width: min(300px, 90vw); padding: 18px; }
+  /* About card: pin to the viewport so it can't hang off the left edge.
+     It is right-aligned to the About nav item, which sits mid-row on small
+     screens, so anchoring to the trigger pushed it off-screen. */
+  .about-card {
+    position: fixed;
+    top: 66px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    padding: 18px;
+    transform-origin: top center;
+  }
+  /* the caret can no longer line up with the trigger, so retire it here */
+  .about-card::before { display: none; }
 
   /* Disclaimer + final CTA stay roomy, not edge-to-edge */
   .disclaimer { padding: 20px; }

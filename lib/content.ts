@@ -21,9 +21,9 @@ export const LANDING = {
     eyebrow: 'A note from the maker',
     title: "Built by someone who's done the admin.",
     body:
-      'I made ADHD Assist because getting support can feel like trying to explain your whole ' +
-      'brain while your brain has left the meeting. This site is here to make the next step ' +
-      'feel smaller, clearer, and less lonely.',
+      'I made ADHD Assist because getting assessed turned out to be mostly admin. Forms, ' +
+      'phone calls, referrals, waiting lists: a process run entirely by the skills ADHD ' +
+      'makes unreliable. This is everything I wish someone had written down for me.',
     signoff: 'No perfect plan required. Just one useful step.',
     cta: 'Find support',
   },
