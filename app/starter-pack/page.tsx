@@ -63,6 +63,48 @@ export default function StarterPack() {
           </p>
         </div>
 
+        {/* Why it exists - the recognition beat before the feature list */}
+        <div
+          style={{
+            background: 'var(--stage)',
+            border: '3px solid var(--ink)',
+            borderRadius: 22,
+            padding: '24px 28px',
+            boxShadow: '0 8px 0 var(--ink)',
+            marginBottom: 44,
+          }}
+        >
+          <div
+            style={{
+              fontSize: 11,
+              fontWeight: 800,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--coral)',
+              marginBottom: 10,
+            }}
+          >
+            Why this pack exists
+          </div>
+          <p
+            style={{
+              fontFamily: "'Archivo Black', sans-serif",
+              fontSize: 'clamp(19px, 2.3vw, 26px)',
+              lineHeight: 1.22,
+              letterSpacing: '-0.02em',
+              color: 'var(--ink)',
+              margin: '0 0 14px',
+              textWrap: 'pretty',
+            }}
+          >
+            You get eight minutes to explain your whole brain. And your brain has left the meeting.
+          </p>
+          <p style={{ fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink)', opacity: 0.8, margin: 0 }}>
+            That&rsquo;s what this pack is for. Everything written down before you walk in, so the
+            appointment doesn&rsquo;t depend on remembering it.
+          </p>
+        </div>
+
         {/* What's in it */}
         <h2 style={{ fontFamily: "'Archivo Black', sans-serif", fontSize: 'clamp(24px,3vw,36px)', letterSpacing: '-0.03em', color: 'var(--ink)', margin: '0 0 24px' }}>
           What&rsquo;s in the pack
