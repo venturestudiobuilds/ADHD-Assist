@@ -7,9 +7,9 @@
 export const BUSINESS = {
   tradingName: 'ADHD Assist',
   /** Your legal name or registered company name (+ company number if Ltd). */
-  legalName: '[YOUR LEGAL NAME OR COMPANY NAME]',
+  legalName: 'Venture Studio Ltd',
   /** A real geographic address - required for distance selling. */
-  address: '[YOUR BUSINESS ADDRESS], United Kingdom',
+  address: 'Main Road, Bucklesham, IP10 0DN, United Kingdom',
   email: 'aiventurestudio@proton.me',
   site: 'https://adhd-assist.vercel.app',
 };
