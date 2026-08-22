@@ -9,17 +9,17 @@ export const LANDING = {
   headlineLine1: 'THE HARDEST PART',
   headlineLine2: "ISN'T THE ADHD.",
   headlineAccent: "IT'S THE ADMIN.",
-  sceneLabel: '◆ SCENE 01 - THE MAZE',
+  sceneLabel: '◆ SCENE 01 - THE SYSTEM',
   joystickHint: 'Drag the joystick · move the brain through the noise',
   subCopyLead: 'The forms, the phone calls, the eight-minute appointment, ',
   subCopyAccent: 'the two-year wait.',
-  supportLine1: "You don't need to solve the maze.",
+  supportLine1: "You don't have to work out the whole system.",
   supportLine2: 'You just need one useful next step.',
   primaryCta: 'Get ADHD support',
   reassurance: "You don't have to keep circling this alone.",
   about: {
     eyebrow: 'A note from the maker',
-    title: 'Built by someone who gets the maze.',
+    title: "Built by someone who's done the admin.",
     body:
       'I made ADHD Assist because getting support can feel like trying to explain your whole ' +
       'brain while your brain has left the meeting. This site is here to make the next step ' +
@@ -165,13 +165,13 @@ export const JOURNEY = [
 
 export const COPY = {
   brand: 'ADHD ASSIST',
-  backToMaze: 'Back to maze',
+  backHome: 'Back to the start',
   hero: {
     eyebrow: '✦ ADHD support hub',
     titleLead: 'Find your way',
     titleAccent: 'through.',
     body:
-      "You don't need to solve the whole maze today. Start with one useful step, " +
+      "You don't need to sort the whole system today. Start with one useful step, " +
       'one clear explanation, or one script you can actually use when your brain goes blank.',
     note:
       'Guidance is available directly on this page. Optional downloads are the same ' +

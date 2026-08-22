@@ -99,7 +99,7 @@ export default function SupportPage() {
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 6 L9 12 L15 18" />
             </svg>
-            {COPY.backToMaze}
+            {COPY.backHome}
           </Link>
         </div>
 
