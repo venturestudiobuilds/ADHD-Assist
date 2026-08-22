@@ -1,6 +1,6 @@
 'use client';
 
-// Landing screen - "WHICH WAY NOW?" hero with the circular maze metaphor
+// Landing screen - "The hardest part isn't the ADHD" hero with the circular maze
 // and a clear CTA through to the support hub.
 
 import React from 'react';
@@ -89,7 +89,7 @@ export default function Hero() {
                 fontWeight: 900,
                 color: 'var(--coral)',
                 WebkitTextStroke: '3px var(--ink)',
-                fontSize: 'clamp(40px, 10.5vw, 156px)',
+                fontSize: 'clamp(30px, 6.4vw, 96px)',
                 letterSpacing: '-0.045em',
                 lineHeight: 0.88,
                 textShadow: '0 7px 0 rgba(31, 95, 107, 0.15)',
@@ -98,9 +98,9 @@ export default function Hero() {
               }}
             >
               <div>{LANDING.headlineLine1}</div>
-              <div style={{ marginTop: '-0.04em' }}>
-                {LANDING.headlineLine2}
-                <span style={{ color: 'var(--ink)', WebkitTextStroke: '0', display: 'inline' }}>?</span>
+              <div style={{ marginTop: '-0.04em' }}>{LANDING.headlineLine2}</div>
+              <div style={{ marginTop: '-0.04em', color: 'var(--ink)', WebkitTextStroke: '0' }}>
+                {LANDING.headlineAccent}
               </div>
             </div>
           </div>
