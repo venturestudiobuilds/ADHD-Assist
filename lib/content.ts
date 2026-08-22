@@ -168,10 +168,10 @@ export const COPY = {
   backHome: 'Back to the start',
   hero: {
     eyebrow: '✦ ADHD support hub',
-    titleLead: 'Find your way',
-    titleAccent: 'through.',
+    titleLead: 'The admin,',
+    titleAccent: 'sorted.',
     body:
-      "You don't need to sort the whole system today. Start with one useful step, " +
+      "You don't need to do all of it today. Start with one useful step, " +
       'one clear explanation, or one script you can actually use when your brain goes blank.',
     note:
       'Guidance is available directly on this page. Optional downloads are the same ' +
